@@ -18,13 +18,24 @@ O3 rospack find <>
 
 ```
 git branch
+ output: *main
 
 git add
+ 
+ O1 git add --all
+  --- to add all files modified 
 
-git commit -m
+git commit -m ""
 
 git push
 
- O3 git push origin main 
+ O1 git push origin main 
+
+```
+
+# 5.ROS
+
+```
+ 
 
 ```
