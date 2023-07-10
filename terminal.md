@@ -1,4 +1,3 @@
-
 # Find
 
 ## 1.1 How to find something
@@ -67,6 +66,17 @@ python train.py --img 640 --epochs 3 --data coco128.yaml --weights yolov5s.pt # 
 # 7. Docker
 
 ``
+
+docker ps
+ --- to list all running containers
+
+docker-compose up -d 
+ --- to update the docker after any changes
+
+docker logs <container_name>
+ ---
+ O1 docker logs cvat_server
+ O2 
 
 
 ``
