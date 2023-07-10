@@ -49,20 +49,25 @@
       play_time.py
       random_50.py
       size_calculator.py
-   In /media/ziwei/yuankai/code
+   ## /media/ziwei/yuankai/code
       yolo_output_classifier.py
       example_3_time_instances.py
       example_image_with_hoi_double.py
       example_image_with_hoi_single.py
+       --- file_changes: 1. e.g. with open('/media/ziwei/yuankai/json_new_30/9_pick_up/0123_single_pick_up_3.json', 'r') as fcc_file:
+                      2. json_file e.g. json_file='/media/ziwei/yuankai/json_new_30/9_pick_up/mp_pick_up_1.json'
+                      3. image_folder e.g. image_folder= '/media/ziwei/yuankai/yolo_output/task_9_pick_up/mp/mp_pick_up_1/obj_train_data'
+                      4. video: --- for the location of image files generated 
+
       js_generator_double_mp.py
       js_generator_single.py
-       --- file_path: 1. file e.g. file='/media/ziwei/yuankai/yolo_output/task_9_pick_up/single/single_pick_up_3/obj_train_data'
+       --- file_changes: 1. file e.g. file='/media/ziwei/yuankai/yolo_output/task_9_pick_up/single/single_pick_up_3/obj_train_data'
                       2. object_label_global e.g. 
                       3. df.index e.g. df.index = ['0','17','36','37','38','39']
                       4. e.g. with open("/media/ziwei/yuankai/json_new_30/9_pick_up/0123_single_pick_up_3.json","w") as f:
                       5. grund_truth e.g. grund_truth=[0,[0,0],22,[1,37],48,[4,37],145,[12,37],248,[1,39],265,[4,39],305,[5,39]352,[4,38],425,[12,38],485,[0,0],534]
 
-      In /media/ziwei/yuankai/code/grund_truth_validation
+   ## /media/ziwei/yuankai/code/grund_truth_validation
         check_double.py
         check_single.py
 
