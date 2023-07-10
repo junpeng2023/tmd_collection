@@ -34,8 +34,39 @@ git push
 ```
 
 # 5.ROS
+```
+roscd <>
+rosls <>
+
 
 ```
+
+
+```
+
+ roslaunch panda_moveit_config demo.launch
+
+ rosrun <> <>
+
  
+```
+
+
+# 6. Python
+
+## YOLO
 
 ```
+python train.py --img 640 --epochs 3 --data coco128.yaml --weights yolov5s.pt # aim: to train with & 1.--img 2.--epochs 3.--data 4.--weights 
+
+
+
+```
+
+
+# 7. Docker
+
+``
+
+
+``
