@@ -9,6 +9,8 @@ F11
  --- to get or exit full screen modus otherwise unpossible to exit
 
 3, 
+Ctrl+A
+ --- to get everything inside the file selected
 
 
 ## in vscode
@@ -42,6 +44,18 @@ O2 rosls <>
 
 O3 rospack find <>
 
+4.
+sudo find / -name <#file_name>
+#-- to get the absolute path of a file in all places, otherwise we do not know where the file is
+
+O1 sudo find / -name demo_30fps-1.mkv
+
+5.
+pwd
+
+#-- to get the path to a file
+
+
 ```
 
 # 2. Installation of something
@@ -62,6 +76,49 @@ git commit -m ""
 git push
 
  O1 git push origin main 
+
+
+
+```
+
+## 3.1 ssh-key for git clone
+```
+
+/// git 
+
+1.
+ssh-keygen
+ #-- to generate a ssh purblic key
+
+// output: 
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/rahulwagh/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/rahulwagh/.ssh/id_rsa.
+Your public key has been saved in /Users/rahulwagh/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:Okq3w+SesCGLQVToSBQru8RdUZtT2EIIrzH5MQ67DWA rahulwagh@local
+The key's randomart image is:
++---[RSA 3072]----+
+|.ooo..+oo.       |
+| oo o..o+.       |
+|=E = = +.        |
+|*oo X o .        |
+|.+ = o  S        |
+|o.  + ..         |
+|o ..+=+          |
+| o + *++         |
+|. . o.+.         |
++----[SHA256]-----+
+
+
+2. 
+/// cd to  e.g. /Users/rahulwagh/.ssh/ with id_rsa.pub as the first step
+cat id_rsa.pub
+#-- to get the ssh key of rsa to paste that into the git(within the settings and "new ssh-key")
+
+
 
 ```
 
