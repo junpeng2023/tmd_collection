@@ -4,6 +4,29 @@
 Ctrl+Shift+N
  --- to open a new folder in a folder
 
+2.
+F11
+ --- to get or exit full screen modus otherwise unpossible to exit
+
+3, 
+
+
+## in vscode
+
+1.
+Ctrl+P 
+ --- to shift quickly between different files in the same folder in vscode(otherwise too slow)
+
+2.
+Ctrl+O
+ --- to open a new file
+
+3.
+Ctrl+B
+ --- to get the left side dictionaries appear or disappear
+
+
+
 
 
 # Find
@@ -89,8 +112,8 @@ version:     2.0
 duration:    1:38s (98s)
 start:       Dec 10 2014 20:08:35.83 (1418270915.83)
 end:         Dec 10 2014 20:10:14.38 (1418271014.38)
-size:        865.0 KB **#-- to get the size information**
-messages:    12471 **#-- to get the rosmsg infomation**
+size:        865.0 KB                                                     **#-- to get the size information**
+messages:    12471                                                        **#-- to get the rosmsg infomation**
 compression: none [1/1 chunks]
 types:       geometry_msgs/Twist [9f195f881246fdfa2798d1d3eebca84a]
              rosgraph_msgs/Log   [acffd30cd6b6de30f120938c17c593fb]
@@ -104,12 +127,20 @@ topics:      /rosout                    4 msgs    : rosgraph_msgs/Log   (2 conne
 
 2.
 rosbag play <>
- #-- to play back in a loop without stopping
- O1 rosbag play -l
  
+ O1 rosbag play -l
+  #-- to play back in a loop without stopping
+ O2 rosbag play -r <play_speed> <bag_name>
+  #-- to play back at a certain speed
+
 3.
 rosbag record 
  O1 rosbag record -a
+ O2 rosbag record -O subset <topic1> <topic2>
+  #-- to tell the bag to only subscribe certain topics
+ O3 rosbag record --duration=30 --output-name=/tmp/mybagfile.bag \
+    /topic1 /topic2 /topic3
+
 
 ``````
 
@@ -121,7 +152,7 @@ rosbag record
 rostopic list
  O1 rostopic list -v
  #-- to get the publischers and subscribers
- O2
+ O2 rostopic echo <>
  
 
  
@@ -186,11 +217,56 @@ docker run -it ubuntu
 
 ``
 
-## 7.1 Duckietown
-
-```
-
+# 8. Duckietown
 
 
 ```
+1.
+dts duckiebot demo --duckiebot_name ![DUCKIEBOT_NAME] --demo_name ![DEMO_NAME] --package_name ![PACKAGE_NAME] --image gitlab.lrz.de:5005/tum-lis/staff/projects/duckietown/base:latest
+ #-- to start the DEMO_NAME.launch launch file in the PACKAGE_NAME package from the gitlab.lrz.de:5005/tum-lis/staff/projects/duckietown/base:latest Docker image on the DUCKIEBOT_NAME Duckiebot. 
 
+2. dts fleet discover
+ #-- to show available Duckiebots
+
+3. dts duckiebot shutdown DUCKIEBOT_NAME
+ #-- to shut down duckiebots(otherwise always open)
+
+```
+
+## 8.1 duckietown-visualization
+
+
+### 8.1.1 Installation
+``````
+
+1.
+/// cd to /src of our workspace(e.g. /catkin_ws/src) as the first step
+git clone https://github.com/duckietown/duckietown-visualization
+
+
+2.
+catkin build 
+/// Run catkin_make instead if you don't use python-catkin-tools.
+
+3. 
+source devel/setup.zsh
+#-- 在创建了ROS的workspace后，需要将workspace中的setup.bash文件写入~/.bashrc 文件中，让其启动
+
+``````
+
+### 8.1.2 Running the map visualization
+
+``````
+
+1.
+roslaunch duckietown_visualization publish_map.launch
+#-- to run the visualization of the default map robotarium1
+
+2. 
+roslaunch duckietown_visualization publish_map.launch map_name:="small_loop"
+
+3.
+roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rviz_config:="path/to/myconfig.rviz"
+
+
+``````

@@ -58,6 +58,9 @@
                       2. json_file e.g. json_file='/media/ziwei/yuankai/json_new_30/9_pick_up/mp_pick_up_1.json'
                       3. image_folder e.g. image_folder= '/media/ziwei/yuankai/yolo_output/task_9_pick_up/mp/mp_pick_up_1/obj_train_data'
                       4. video: --- for the location of image files generated 
+                      5. grund_truth e.g. grund_truth=[0,[0,0],22,[1,37],48,[4,37],145,[12,37],248,[1,39],265,[4,39],305,[5,39]352,[4,38],425,[12,38],485,[0,0],534]
+                      6. Name_index
+                      7. df.index
 
       js_generator_double_mp.py
       js_generator_single.py
@@ -69,6 +72,8 @@
 
    ## /media/ziwei/yuankai/code/grund_truth_validation
         check_double.py
+        --- to?
         check_single.py
+        --- to?
 
 ### location of 
