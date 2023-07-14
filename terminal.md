@@ -327,3 +327,25 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
 
 
 ``````
+
+# 9 CV
+
+## 9.1 ffmpeg
+
+``````
+
+  ffmpeg -r <frame_rate> -i <png_sequenz> -c:v libx264 -pix_fmt yuv420p <path_to_mp4>
+
+  O1
+   ffmpeg -r 30 -i %04d.PNG -c:v libx264 -pix_fmt yuv420p /media/ziwei/yuankai/pictures_to_show/videos/9_pick_up/col/col_pick_up_1/anno_col_pick_up_1.mp4
+
+  ``````
+
+  ``````
+
+ ffmpeg -i <mp4_file> -r <frame_rate> frame%d.png
+
+ O1 
+ ffmpeg -i col_bag_1_depth-2023-07-13_22.08.57.mp4 -r 30 /media/ziwei/PortableSSD/depth_video/images/col/col_bad/col_bad_1/frame%4d.
+
+ ``````
