@@ -333,19 +333,27 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
 ## 9.1 ffmpeg
 
 ``````
-
+  1.
   ffmpeg -r <frame_rate> -i <png_sequenz> -c:v libx264 -pix_fmt yuv420p <path_to_mp4>
-
+  #-- to convert some png files into a mp4 video
   O1
    ffmpeg -r 30 -i %04d.PNG -c:v libx264 -pix_fmt yuv420p /media/ziwei/yuankai/pictures_to_show/videos/9_pick_up/col/col_pick_up_1/anno_col_pick_up_1.mp4
 
   ``````
 
   ``````
-
+ 2.
  ffmpeg -i <mp4_file> -r <frame_rate> frame%d.png
-
+ #-- to extract frames from a mp4 video
  O1 
  ffmpeg -i col_bag_1_depth-2023-07-13_22.08.57.mp4 -r 30 /media/ziwei/PortableSSD/depth_video/images/col/col_bad/col_bad_1/frame%4d.
 
+
+ 3.
+ ffmpeg -i input.mp4 -vf "scale=1280:720" output.mp4
+ #-- to convert the video to a resolution that we want to have such as 1280*720
+
+
  ``````
+
+
