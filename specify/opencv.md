@@ -2,6 +2,8 @@
 
 # OpenCV
 
+# 1. ffmpeg
+
 ## 1.1 How to convert png files into a mp4
   ``````
 
@@ -28,3 +30,10 @@
  ### Troubleshooting
    1. please check the frame rate and ensure it is right when telling the ffmpeg
    2. no "-o" for output video
+
+
+# 2. camera_calibration
+
+ ### Troubleshooting
+  bug: How many grids for detection? 
+  S: (x-1,y-1) for x,y are the length and width of the chessboard, otherwise the grids may not be detected
