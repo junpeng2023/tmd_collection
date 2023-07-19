@@ -1,0 +1,24 @@
+
+
+/// YOLOv5
+很多人考虑到Yolov5的创新性不足，对算法是否能够进化，称得上Yolov5而议论纷纷。
+
+但既然称之为Yolov5，也有很多非常不错的地方值得我们学习。不过因为Yolov5的网络结构和Yolov3、Yolov4相比，不好可视化，导致很多同学看Yolov5看的云里雾里。
+
+
+// Neck
+目的是为了融合骨干网不同层次的特征，卷积层和池化层是为了在保留重要feature的情况下 降低feature map的维度, 否则
+
+In YOLOv5, the neck is a part of the object detection pipeline that is responsible for fusing the features from the different layers of the backbone network. The neck is typically composed of a series of convolutional layers and pooling layers that are used to reduce the dimensionality of the feature maps while preserving the important features.
+
+// prediction
+
+
+
+
+
+
+
+
+
+

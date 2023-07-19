@@ -37,3 +37,21 @@
  ### Troubleshooting
   bug: How many grids for detection? 
   S: (x-1,y-1) for x,y are the length and width of the chessboard, otherwise the grids may not be detected
+
+
+
+
+
+
+# n. link collection
+
+
+## n.1 github
+``````
+
+
+
+
+
+
+``````

@@ -2,15 +2,19 @@
 
 1.
 Ctrl+Shift+N
- --- to open a new folder in a folder
+ #-- to open a new folder in a folder
 
 2.
 F11
- --- to get or exit full screen modus otherwise unpossible to exit
+ #-- to get or exit full screen modus otherwise unpossible to exit
 
 3, 
 Ctrl+A
- --- to get everything inside the file selected
+ #-- to get everything inside the file selected
+
+ 4.
+ Entf/delete
+ #-- to move files to trash quickly
 
 
 ## in vscode

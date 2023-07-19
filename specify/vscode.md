@@ -82,6 +82,12 @@ cv2.cvtColor(<single_image>,<Color Space Conversions>)
 
 1. 
 cv2.imread(<path_to_image_file>)
+O1 cv.imread(imgpath)
+Bsp1. 
+imglist = png
+imglist.sort(key=lambda x:int(x[6:-4]))
+
+imgpath=os.path.join(file,imglist[0])
 
 
 2.
@@ -119,6 +125,19 @@ image = cv2.drawChessboardCorners(image,
 3. 
 ret, matrix, distortion, r_vecs, t_vecs = cv2.calibrateCamera(
     threedpoints, twodpoints, grayColor.shape[::-1], None, None)
+
+4.
+
+
+
+``````
+
+### 3.4 Draw
+
+``````
+
+1.
+cv2.rectangle()
 
 
 
