@@ -4,11 +4,13 @@
 
 ## Troubleshooting
 
-/// 9GB for the xssession-error.old? Why?
+/// #? Why?
  does not work
 
 /// to remove some files inside /ge78pav/.config/guvcviewer
  works
+
+ 
 
 
  

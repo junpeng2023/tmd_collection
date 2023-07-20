@@ -360,4 +360,20 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
 
  ``````
 
+ # 10. File processing
+
+
+ ## 10.1 zip
+
+ ``````
+
+ 1.
+ zip -r <zip_file> <folder>
+
+ 2.
+ zip <zip_file> <file>
+
+
+ ``````
+
 

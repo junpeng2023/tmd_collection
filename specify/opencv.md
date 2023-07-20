@@ -34,6 +34,12 @@
 
 # 2. camera_calibration
 
+## knowledge
+ ```
+ #-- the purpose is to estimate the  @1 instrinsic and extrinsic parameters @2 to get the pose of the camera @3 to correct distortions
+ 
+ ```
+
  ### Troubleshooting
   bug: How many grids for detection? 
   S: (x-1,y-1) for x,y are the length and width of the chessboard, otherwise the grids may not be detected
