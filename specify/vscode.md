@@ -9,9 +9,36 @@
 1. for <> in os.listdir(<>)
 
 
-2. 
+2. os.path.exists(video_path)
+ #-- to use a bool to see whether the path exists or not
+
+3. if os.path.isdir(<>)
+ #-- to use a bool to classify the folder_path and file_path, when we want to use folder_path, otherwise not able for iteration
+O1 
+# Path
+path = '/home/User/Documents/file.txt'
+  
+# Check whether the 
+# specified path is an
+# existing directory or not
+isdir = os.path.isdir(path)
+print(isdir)
+  
+  
+# Path
+path = '/home/User/Documents/'
+  
+# Check whether the 
+# specified path is an
+# existing directory or not
+isdir = os.path.isdir(path)
+print(isdir)
 
 
+4. os.getcwd()
+# Print current working directory
+
+5. 
 
 ``````
 
@@ -81,7 +108,7 @@ cv2.cvtColor(<single_image>,<Color Space Conversions>)
 ``````
 
 1. 
-cv2.imread(<path_to_image_file>)
+<>=cv2.imread(<path_to_image_file>)
 O1 cv.imread(imgpath)
 Bsp1. 
 imglist = png
@@ -101,9 +128,17 @@ cv2.destroyAllWindows()
 4.
 cv2.waitKey()
 #-- to adjust the play speed when running the script and enable key operations
+O1 cv2.waitKey()&0xFF
 O1 cv2.waitKey(0)&0xFF
 O2 cv2.waitKey(100)&0xFF
-O
+
+
+
+5. 
+<video_in_code>=cv2.VideoCapture(<video_path>)
+#-- to read a video from a path, otherwise the video is not in the code
+O1
+video = cv2.VideoCapture(video_path)
 ``````
 
 ### 3.3 camera_calibration
@@ -127,6 +162,7 @@ ret, matrix, distortion, r_vecs, t_vecs = cv2.calibrateCamera(
     threedpoints, twodpoints, grayColor.shape[::-1], None, None)
 
 4.
+
 
 
 

@@ -1,7 +1,11 @@
 
 
+### 
 
-### staging area
+
+
+### Troubleshooting area
+
 
 
 Essays: 
@@ -13,4 +17,8 @@ Detection on a Mobile Robot (https://arxiv.org/pdf/2211.11520.pdf)
 
 
 2.
+
+
+
+
 
