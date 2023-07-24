@@ -357,6 +357,9 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
  ffmpeg -i input.mp4 -vf "scale=1280:720" output.mp4
  #-- to convert the video to a resolution that we want to have such as 1280*720
 
+ 4.
+ ffmpeg -i <input_image_file> -vf "scale=1280:720" <output_image_file>
+ #-- to convert the image file into a resolution that we want to have such as 1280*720
 
  ``````
 

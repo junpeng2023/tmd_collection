@@ -11,6 +11,7 @@
 
 In YOLOv5, the neck is a part of the object detection pipeline that is responsible for fusing the features from the different layers of the backbone network. The neck is typically composed of a series of convolutional layers and pooling layers that are used to reduce the dimensionality of the feature maps while preserving the important features.
 
+
 // prediction
 
 

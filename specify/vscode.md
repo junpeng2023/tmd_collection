@@ -9,36 +9,9 @@
 1. for <> in os.listdir(<>)
 
 
-2. os.path.exists(video_path)
- #-- to use a bool to see whether the path exists or not
-
-3. if os.path.isdir(<>)
- #-- to use a bool to classify the folder_path and file_path, when we want to use folder_path, otherwise not able for iteration
-O1 
-# Path
-path = '/home/User/Documents/file.txt'
-  
-# Check whether the 
-# specified path is an
-# existing directory or not
-isdir = os.path.isdir(path)
-print(isdir)
-  
-  
-# Path
-path = '/home/User/Documents/'
-  
-# Check whether the 
-# specified path is an
-# existing directory or not
-isdir = os.path.isdir(path)
-print(isdir)
+2. 
 
 
-4. os.getcwd()
-# Print current working directory
-
-5. 
 
 ``````
 
@@ -108,7 +81,7 @@ cv2.cvtColor(<single_image>,<Color Space Conversions>)
 ``````
 
 1. 
-<>=cv2.imread(<path_to_image_file>)
+cv2.imread(<path_to_image_file>)
 O1 cv.imread(imgpath)
 Bsp1. 
 imglist = png
@@ -128,17 +101,9 @@ cv2.destroyAllWindows()
 4.
 cv2.waitKey()
 #-- to adjust the play speed when running the script and enable key operations
-O1 cv2.waitKey()&0xFF
 O1 cv2.waitKey(0)&0xFF
 O2 cv2.waitKey(100)&0xFF
-
-
-
-5. 
-<video_in_code>=cv2.VideoCapture(<video_path>)
-#-- to read a video from a path, otherwise the video is not in the code
-O1
-video = cv2.VideoCapture(video_path)
+O
 ``````
 
 ### 3.3 camera_calibration
@@ -162,7 +127,14 @@ ret, matrix, distortion, r_vecs, t_vecs = cv2.calibrateCamera(
     threedpoints, twodpoints, grayColor.shape[::-1], None, None)
 
 4.
+corners= cv2.cornerSubPix()
+O1 corners2 = cv2.cornerSubPix(
+                grayColor, corners, (11, 11), (-1, -1), criteria)
+#-- 在原角点的基础上寻找亚像素角点
 
+5. newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (u, v), 0, (u, v))
+#-- 
+O1 newcameramtx, roi = cv2.getOptimalNewCameraMatrix(mtx, dist, (u, v), 0, (u, v))
 
 
 
@@ -174,8 +146,120 @@ ret, matrix, distortion, r_vecs, t_vecs = cv2.calibrateCamera(
 
 1.
 cv2.rectangle()
+#-- to draw bounding boxes or something equivalent
 
+2.
 
 
 
 ``````
+
+
+### 3.5 Display Window Operations
+
+``````
+1. cv2.namedWindow(<window_title>,cv2.WINDOW_NORMAL)
+O1
+cv2.namedWindow('findCorners', cv2.WINDOW_NORMAL)
+
+2. cv2.resizeWindow('<window_title>'.<length>,<height>)
+O2      
+cv2.resizeWindow('findCorners', 640, 480)
+
+
+
+``````
+
+### 3-A Troubleshooting
+
+
+#### 1
+```
+
+
+/home/ziwei/anaconda3/bin/python "/media/ziwei/PortableSSD/Junpeng/duckietown_cv/csdn_ calibration.py"
+[ WARN:0@0.006] global loadsave.cpp:244 findDecoder imread_('calibration_1.mkvframe0257.jpg'): can't open/read file: check file path/integrity
+Traceback (most recent call last):
+  File "/media/ziwei/PortableSSD/Junpeng/duckietown_cv/csdn_ calibration.py", line 40, in <module>
+    print('img.shape',img.shape)
+AttributeError: 'NoneType' object has no attribute 'shape'
+
+```
+
+##### Solution
+  e.g. img_path = os.path.join('/home/ziwei/Desktop/calibration_3', filename)
+  --- as file_name is e.g. frame0001.jpg and the real directory is e.g /home/ziwei/Desktop/calibration_3, so we have to get them together to be the input for "cv2.imread(<>)"
+
+
+#### 2
+
+```
+
+/home/ziwei/anaconda3/bin/python /media/ziwei/PortableSSD/Junpeng/duckietown_cv/camera_cali.py
+[ WARN:0@0.006] global loadsave.cpp:244 findDecoder imread_('calibration_1.mkvframe0257.jpg'): can't open/read file: check file path/integrity
+Traceback (most recent call last):
+  File "/media/ziwei/PortableSSD/Junpeng/duckietown_cv/camera_cali.py", line 65, in <module>
+    grayColor = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+cv2.error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+```
+
+##### solution
+  e.g. img_path = os.path.join('/home/ziwei/Desktop/calibration_3', filename)
+  --- as file_name is e.g. frame0001.jpg and the real directory is e.g /home/ziwei/Desktop/calibration_3, so we have to get them together to be the input for "cv2.imread(<>)"
+
+#### 3
+
+```
+
+[ WARN:0@1.989] global cap_v4l.cpp:982 open VIDEOIO(V4L2:/dev/video0): can't open camera by index
+[ERROR:0@1.990] global obsensor_uvc_stream_channel.cpp:156 getStreamChannelGroup Camera index out of range
+Traceback (most recent call last):
+  File "/media/ziwei/PortableSSD/Junpeng/duckietown_cv/csdn_ calibration.py", line 88, in <module>
+    h1, w1 = frame.shape[:2]
+AttributeError: 'NoneType' object has no attribute 'shape'
+
+```
+
+##### solution
+
+
+#### 4
+
+```
+from common import splitfn
+# the package common is missing
+
+```
+
+##### solution
+ --- get the file common.py from the git of opencv/sample/python/ to the same directory as the code
+
+
+
+
+#### 5
+
+```
+--- always the same image written to the undistorted image folder
+
+```
+
+##### possible reasons
+--- e.g. dst = cv2.undistort(image, matrix, distortion, None, newcameramtx), while image is not from imread but from another place such as glob
+
+
+##### solution
+--- should be img instead of image
+
+
+#### 6
+
+```
+--- always get just a few images instead of those in the whole directory
+
+```
+
+##### solution
+ --- to use less images selected in a smaller range instead of using frames of a whole video
+ --- use the cv2.destroyWindow, otherwise the display imshow would not cease
