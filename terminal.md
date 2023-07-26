@@ -230,9 +230,24 @@ rostopic list
 
 1.
 python train.py --img 640 --epochs 3 --data coco128.yaml --weights yolov5s.pt # aim: to train with & 1.--img 2.--epochs 3.--data 4.--weights 
+#-- detect.py runs YOLOv5 inference on a variety of sources, downloading models automatically from the latest YOLOv5 release, and saving results to runs/detect. Example inference sources are:
+
+python detect.py --source 0  # webcam
+                          img.jpg  # image 
+                          vid.mp4  # video
+                          screen  # screenshot
+                          path/  # directory
+                         'path/*.jpg'  # glob
+                         'https://youtu.be/Zgi9g1ksQHc'  # YouTube
+                         'rtsp://example.com/media.mp4'  # RTSP, RTMP, HTTP stream
 
 2.
 python3 <>
+
+3.
+!python val.py --weights yolov5s.pt --data coco.yaml --img 640 --half
+#-- to validate a model's accuracy on the COCO dataset's val or test splits.
+
 
 ```
 
