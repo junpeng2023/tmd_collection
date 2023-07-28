@@ -263,3 +263,28 @@ from common import splitfn
 ##### solution
  --- to use less images selected in a smaller range instead of using frames of a whole video
  --- use the cv2.destroyWindow, otherwise the display imshow would not cease
+
+
+## 4. CUDA
+
+### 4-A Troubleshooting
+ 
+ #### 1
+
+ 
+ ```
+ 
+    RuntimeError: CUDA out of memory.
+    RuntimeError: CUDA error: device-side assert triggered.
+    RuntimeError: CUDA error: launch failed.
+
+ 
+ ```
+
+ ##### solution
+
+ ```
+  -- use the DDP to speed up the training process
+  
+ 
+ ```
