@@ -394,4 +394,31 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
 
  ``````
 
+  ## 10.2 File_editor
+
+   
+  ### 10.2.1 gedit
+
+  ```
+  
+  gedit <file_name>
+  #-- to create or edit a file
+  bug1: an empty file created by gedit will not be stored
+   -- solution: to write down something into the file and then close the file for storage
+
+  bug2: forget the "gedit", then waste some time costs
+
+  ```
+
+  ### 10.2.2 nano
+
+  ### 10.2.3 vim
+
+  ### 10.2.4 code .
+
+  ### 10.2.5 cat
+
+
+
+
 
