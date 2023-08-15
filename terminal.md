@@ -70,6 +70,11 @@ pwd
 git branch
  output: *main
 
+git checkout <>
+#-- to move to another branch 
+ A1 git checkout -b
+ #-- to create a branch and move to that
+
 git add
  
  O1 git add --all
@@ -80,6 +85,10 @@ git commit -m ""
 git push
 
  O1 git push origin main 
+
+git reset <> or git reset
+#-- to undo "git add <>"
+
 
 
 
