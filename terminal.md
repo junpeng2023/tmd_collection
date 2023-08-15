@@ -17,6 +17,7 @@ Ctrl+A
  #-- to move files to trash quickly
 
 
+
 ## in vscode
 
 1.
@@ -31,6 +32,16 @@ Ctrl+O
 Ctrl+B
  --- to get the left side dictionaries appear or disappear
 
+4.
+Ctrl+Shift+V
+ #-- to open the preview of a .md file
+
+
+## in web browser
+
+1.
+Ctrl+P
+ #-- to print something and show the print window as the first step
 
 
 
@@ -89,9 +100,6 @@ git push
 git reset <> or git reset
 #-- to undo "git add <>"
 
-
-
-
 ```
 
 ## 3.1 ssh-key for git clone
@@ -128,8 +136,20 @@ The key's randomart image is:
 
 2. 
 /// cd to  e.g. /Users/rahulwagh/.ssh/ with id_rsa.pub as the first step
+cd ~/.ssh
+
+3.
+O1
 cat id_rsa.pub
 #-- to get the ssh key of rsa to paste that into the git(within the settings and "new ssh-key")
+
+O2
+cat ~/.ssh/id_rsa.pub
+#-- to get the ssh key of rsa to paste that into the git(within the settings and "new ssh-key") without cd to .ssh first
+
+4.
+# copy&paste into git in settings-> SSH and GPG keys
+
 
 
 
@@ -148,6 +168,12 @@ conda init
 1.
 roscd <>
  #-- to get to a ros package quickly
+ e.g. 1. 
+ roscd usb_cam
+ e.g. 2.
+ roscd camera_calibration
+ e.g. 3.
+ 
 
 2.
 rosls <>
@@ -157,8 +183,35 @@ rosls <>
 printenv | grep ROS
  #-- to get version information
  
+4.
+roslaunch <package> <launch_file>
+e.g 1.
 roslaunch panda_moveit_config demo.launch
+e.g. 2.
+roslaunch usb_cam usb_cam-test.launch
+ bug1:  {
+          ROS_MASTER_URI=http://localhost:11311
 
+        process[usb_cam-1]: started with pid [104971]
+        process[image_view-2]: started with pid [104972]
+        [ INFO] [1691682165.921051114]: Initializing nodelet with 16 worker threads.
+        [ INFO] [1691682165.979152625]: Using transport "raw"
+        [ INFO] [1691682165.989513159]: using default calibration URL
+        [ INFO] [1691682165.989916393]: camera calibration URL: file:///home/ge78pav/.ros/camera_info/usb_cam.yaml
+        [ INFO] [1691682165.991087210]: Starting 'usb_cam' (/dev/video0) at 640x480 via mmap (yuyv) at 30 FPS
+        [ WARN] [1691682165.991120775]: /dev/video0 does not support setting format options.
+        [ WARN] [1691682165.991131501]: /dev/video0 supports: 
+          Width/Height 	 : 1280/720
+          Pixel Format 	 : MJPG
+        [ERROR] [1691682165.991145483]: VIDIOC_S_FMT error 16, Device or resource busy
+        [usb_cam-1] process has died [pid 104971, exit code 1, cmd /opt/ros/noetic/lib/usb_cam/usb_cam_node __name:=usb_cam __log:=/home/ge78pav/.ros/log/b12f8a7a-377a-11ee-a6e5-ddb6416cc2d7/usb_cam-1.log].
+        log file: /home/ge78pav/.ros/log/b12f8a7a-377a-11ee-a6e5-ddb6416cc2d7/usb_cam-1*.log
+ }
+  solution 1:
+   # ?
+ 
+
+5.
 rosrun <> <>
  ## turtle (from rosbag/Tutorials/Recording and playing back data )
   O1 rosrun turtlesim turtlesim_node
@@ -166,7 +219,26 @@ rosrun <> <>
   O2 rosrun turtlesim turtle_teleop_key
    #-- to use keyboard to control the turtle
   O3 
-  
+
+6. 
+#-- to tell the ROS that changes have been made in the workspace 
+
+ S1. 
+ cd <workspace_directory>
+ e.g 1. 
+ cd catkin_ws
+
+ S2.
+ catkin_make
+ #-- to do the make command designed for ROS so that many steps can be merged into one step.
+
+ S3.
+ e.g. 1.
+ source devel/setup.bash  
+ e.g. 2.
+ source /opt/ros/noetic/setup.bash
+
+
 
 ```
 
@@ -294,8 +366,66 @@ docker run ubuntu
 docker run -it ubuntu
 
 
-5.
+5. S 
+docker image list
 
+
+## 7.1 to install docker for duckietown
+link: https://docs.duckietown.com/daffy/opmanual-duckiebot/setup/setup_laptop/setup_docker.html
+
+
+1.
+sudo apt-get remove docker docker-engine docker.io containerd runc
+ #-- to ensure that the older versions of docker would not interfer and 2. get the docker.io
+
+error1: docker-engine can not be located
+solution:?
+link:
+https://stackoverflow.com/questions/39645118/docker-unable-to-locate-package-docker-engine
+
+6.
+sudo apt-get install \
+    ca-certificates \
+    curl \
+    gnupg
+ #-- to install 
+
+7.
+sudo mkdir -m 0755 -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+#-- to add official keys
+
+8.
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+#-- to set up the docker repository
+
+9.
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-compose
+#-- install Docker Engine and Docker Compose
+
+10.
+sudo adduser `whoami` docker
+#-- Start by adding the user “docker” to your user group, then log out and back in
+
+11.
+docker run hello-world
+ #-- to run the docker with the demo "hello world"
+
+error1: 
+docker: permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create": dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+solution1: sudo chmod 666 /var/run/docker.sock
+link: https://blog.csdn.net/qq_35885175/article/details/122316520
+
+12.
+docker --version
+docker buildx version
+#-- Make sure the Docker version is v1.4.0+ and buildx version v.0.8.0+
 
 
 
@@ -355,6 +485,8 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
 
 
 ``````
+
+
 
 # 9 CV
 

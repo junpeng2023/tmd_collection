@@ -29,10 +29,6 @@
 
   P3: What are 
 
-  ## Memory 
+  ## 
 
-   ### Cache
-
-   Q1: Is CPU part of Cache?
-
-   Q2: When is the so-called "read hit/miss" not a good idea?
+   ### 
