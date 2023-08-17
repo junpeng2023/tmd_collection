@@ -361,12 +361,18 @@ docker logs <#container_name>
 
 
 4.
+docker run <>
 docker run ubuntu
 
 docker run -it ubuntu
 
+docker run hello-world
+docker run --rm hello-world
 
-5. S 
+
+
+
+5. 
 docker image list
 
 
