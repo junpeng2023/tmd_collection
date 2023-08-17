@@ -1,5 +1,6 @@
 # Keyboard
 
+## in Files
 1.
 Ctrl+Shift+N
  #-- to open a new folder in a folder
@@ -12,11 +13,12 @@ F11
 Ctrl+A
  #-- to get everything inside the file selected
 
- 4.
- Entf/delete
- #-- to move files to trash quickly
+4.
+Entf/delete
+#-- to move files to trash quickly
 
 
+ 
 
 ## in vscode
 
@@ -43,6 +45,9 @@ Ctrl+Shift+V
 Ctrl+P
  #-- to print something and show the print window as the first step
 
+2.
+right-klick + open in a new tab
+ #-- to open a new tab without covering the current tab
 
 
 
@@ -451,6 +456,8 @@ dts duckiebot demo --duckiebot_name ![DUCKIEBOT_NAME] --demo_name ![DEMO_NAME] -
 
 3. dts duckiebot shutdown DUCKIEBOT_NAME
  #-- to shut down duckiebots(otherwise always open)
+
+ 
 
 ```
 
