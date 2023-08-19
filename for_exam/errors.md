@@ -10,6 +10,9 @@ S: to list a jindutiao to see how far we have got
 bug:
 S: O1 To assume that we are writing and therefore can do real-time planning 
 
+3.
+bug:
+S:
 
 ``````
 # 1. Digital Circuits

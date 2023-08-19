@@ -38,6 +38,13 @@ Ctrl+B
 Ctrl+Shift+V
  #-- to open the preview of a .md file
 
+5. 
+Ctrl+'+'
+ #-- to zoom in the whole window of vscode
+
+6.
+Ctrl+'-'
+ #-- to zoom out the whole window of vscode
 
 ## in web browser
 
@@ -457,7 +464,15 @@ dts duckiebot demo --duckiebot_name ![DUCKIEBOT_NAME] --demo_name ![DEMO_NAME] -
 3. dts duckiebot shutdown DUCKIEBOT_NAME
  #-- to shut down duckiebots(otherwise always open)
 
- 
+4. dts
+
+5. #-- to avoid errors when starting the dts
+ S1. cd ~/.dt-shell
+ S2. rm -rf <commands_folder>
+  e.g1. rm -rf commands-multi
+
+
+
 
 ```
 
@@ -571,6 +586,19 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
   ### 10.2.4 code .
 
   ### 10.2.5 cat
+
+
+# 11. Virtual Environment
+
+ ## 11.1 pipenv
+
+ 1.
+ pipenv install
+ #-- to install the virtual environment
+
+ 2.
+ pipenv shell
+ #-- To activate this project's virtualenv, otherwise no virtual environment activated
 
 
 
