@@ -613,6 +613,17 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
 
 ```
 
+# 12. Jupyter-Notebook
 
+```
+  1.
+  jupyter-notebook
+  #-- to activate the jupyter notebook in a web browser
+
+  2.
+  
+
+
+```
 
 
