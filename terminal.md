@@ -1,6 +1,8 @@
 # Keyboard
 
 ## in Files
+
+```
 1.
 Ctrl+Shift+N
  #-- to open a new folder in a folder
@@ -17,11 +19,12 @@ Ctrl+A
 Entf/delete
 #-- to move files to trash quickly
 
-
+```
  
 
 ## in vscode
 
+```
 1.
 Ctrl+P 
  --- to shift quickly between different files in the same folder in vscode(otherwise too slow)
@@ -46,8 +49,11 @@ Ctrl+'+'
 Ctrl+'-'
  #-- to zoom out the whole window of vscode
 
+```
+
 ## in web browser
 
+```
 1.
 Ctrl+P
  #-- to print something and show the print window as the first step
@@ -56,7 +62,7 @@ Ctrl+P
 right-klick + open in a new tab
  #-- to open a new tab without covering the current tab
 
-
+```
 
 # Find
 
@@ -347,7 +353,7 @@ python3 <>
 
 # 7. Docker
 
-``
+```
 1.
 docker ps
  #-- to list all running containers
@@ -388,7 +394,11 @@ docker run --rm hello-world
 docker image list
 
 
+```
+
 ## 7.1 to install docker for duckietown
+
+```
 link: https://docs.duckietown.com/daffy/opmanual-duckiebot/setup/setup_laptop/setup_docker.html
 
 
@@ -448,7 +458,7 @@ docker buildx version
 
 
 
-``
+```
 
 # 8. Duckietown
 
@@ -470,7 +480,7 @@ dts duckiebot demo --duckiebot_name ![DUCKIEBOT_NAME] --demo_name ![DEMO_NAME] -
  S1. cd ~/.dt-shell
  S2. rm -rf <commands_folder>
   e.g1. rm -rf commands-multi
-
+ 
 
 
 
@@ -592,6 +602,7 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
 
  ## 11.1 pipenv
 
+```
  1.
  pipenv install
  #-- to install the virtual environment
@@ -600,6 +611,7 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
  pipenv shell
  #-- To activate this project's virtualenv, otherwise no virtual environment activated
 
+```
 
 
 
