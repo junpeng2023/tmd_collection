@@ -12,5 +12,6 @@ Q65 pcl file and visualization in rviz
 
 Q66 Problem when installing the pcl package and its troubleshooting
  -1 no pcl_common
-Q67
+
+Q67 rosrun usb_cam usb_cam_node in 1280x720 instead of 640x480
 # 
