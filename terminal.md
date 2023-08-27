@@ -72,6 +72,8 @@ right-klick + open in a new tab
 ```
 
 O1 which <package>
+e.g. 1. which dts
+#-- to find the package dts installed or not
 
 O2 rosls <>
 
@@ -537,6 +539,10 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
   O1
    ffmpeg -r 30 -i %04d.PNG -c:v libx264 -pix_fmt yuv420p /media/ziwei/yuankai/pictures_to_show/videos/9_pick_up/col/col_pick_up_1/anno_col_pick_up_1.mp4
 
+  A1 
+  cat $(ls -v depth_*_normalized.png) | ffmpeg -f image2pipe -r 25 -i - -c:v libx264 -pix_fmt yuv420p output_video.mp4
+  #-- to get every single frames to be involved in the mp4 file
+
   ``````
 
   ``````
@@ -555,6 +561,11 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
  ffmpeg -i <input_image_file> -vf "scale=1280:720" <output_image_file>
  #-- to convert the image file into a resolution that we want to have such as 1280*720
 
+ 5.
+ ffmpeg -i <input_mp4_file> -filter:v "setpts=<multiplier>*PTS" <output_mp4_file>
+ e.g.1.
+ ffmpeg -i input.mkv -filter:v "setpts=0.5*PTS" output.mkv
+ #-- to adjust the speed of a video
  ``````
 
  # 10. File processing
