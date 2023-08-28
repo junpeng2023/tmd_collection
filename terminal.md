@@ -73,7 +73,10 @@ right-klick + open in a new tab
 
 O1 which <package>
 e.g. 1. which dts
-#-- to find the package dts installed or not
+#-- to find the package dts installed or not and find the path where it is installed
+e.g. 2. which rviz
+#-- to find the package rviz installed or not and find the path where it is installed
+
 
 O2 rosls <>
 
@@ -481,7 +484,7 @@ dts duckiebot demo --duckiebot_name ![DUCKIEBOT_NAME] --demo_name ![DEMO_NAME] -
 5. #-- to avoid errors when starting the dts
  S1. cd ~/.dt-shell
  S2. rm -rf <commands_folder>
-  e.g1. rm -rf commands-multi
+  e.g.1. rm -rf commands-multi
  
 
 
@@ -522,6 +525,7 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop"
 
 3.
 roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rviz_config:="path/to/myconfig.rviz"
+
 
 
 ``````
@@ -603,6 +607,7 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
   ### 10.2.2 nano
 
   ### 10.2.3 vim
+  
 
   ### 10.2.4 code .
 

@@ -1,3 +1,9 @@
 
-# In terminal
+# Troubleshooting
+
+## CV_project
+
+### 1. How to install the pcl package
+
+
 
