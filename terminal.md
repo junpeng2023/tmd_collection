@@ -68,7 +68,7 @@ right-klick + open in a new tab
 
 
 
-## 1.1 How to find something
+## 1. How to find something
 ```
 
 O1 which <package>
@@ -92,6 +92,26 @@ O1 sudo find / -name demo_30fps-1.mkv
 pwd
 
 #-- to get the path to a file
+
+
+
+```
+
+## 1.1 How to find the path of a file
+
+```
+1.
+S1 #-- use readlink to get the path of a file better and faster than pwd
+cd <target_directory>
+
+S2 
+readlink -f <file_name>
+
+2. #-- to get the absolute directory of a file
+realpath <file_name>
+
+
+
 
 
 ```
@@ -181,7 +201,15 @@ cat ~/.ssh/id_rsa.pub
 # 4. Anaconda
 
 ```
+
+1.
 conda init
+
+2.
+conda activate base
+#-- to activate a environment
+
+3.
 
 ```
 
@@ -607,7 +635,7 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
   ### 10.2.2 nano
 
   ### 10.2.3 vim
-  
+
 
   ### 10.2.4 code .
 
