@@ -54,17 +54,92 @@ cv2.error: OpenCV(4.7.0) :-1: error: (-5:Bad argument) in function 'imshow'
  S2 
 
  #### idea2. use the files such as bag2png_depth.py imported from the web browser
- weblink: https://idorobotics.com/2021/03/08/extracting-ros-bag-files-to-python/
+ weblink: *O1. https://idorobotics.com/2021/03/08/extracting-ros-bag-files-to-python/
           #-- to get the code for bag2csv and bag2png
+          Steps: S1
+          O2. https://gist.github.com/wngreene/835cda68ddd9c5416defce876a4d7dd9
+          #-- to get the file bag_to_images.py and their Q&A
+          O3. https://coderwall.com/p/qewf6g/how-to-extract-images-from-a-rosbag-file-and-convert-them-to-video
+          #-- get the rosrun command to extract the frames into one folder
+          O4. http://wiki.ros.org/rosbag/Tutorials/Exporting%20image%20and%20video%20data
+          #-- to use the export_bad.launch to get the frames extracted
+          bug1: no rostopic "/file_version"
+          O5.  
 
  file_link: 1. /media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_recording/25_bag2png.py
             2. /media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_recording/bag2png_depth.py
  
  
-#### 3. -- to get the lane detected
+### 3. -- to get the lane detected
+weblink: 01. https://www.youtube.com/watch?v=mXH1u885bn8
+         #-- youtube video for duckietown lane following demo
 
 #### idea1. use Hough Transformation
 
+
 #### idea2. use HSV detection?
 
-#### idea3. 
+#### idea3. use 
+
+
+#### idea4. test other gits 
+
+ ##### 1. AdvancedLaneFinding.py
+ #-- to
+ bug1: inotify_add_watch(...) failed: "No space left on device
+ sol1: in gbt Q15
+  S1. 
+
+ bug2:
+    Traceback (most recent call last):
+    File "/home/ziwei/anaconda3/lib/python3.9/site-packages/moviepy/video/VideoClip.py", line 262, in write_videofile
+        codec = extensions_dict[ext]['codec'][0]
+    KeyError: 'mkv'
+
+    During handling of the above exception, another exception occurred:
+
+    Traceback (most recent call last):
+    File "/media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_lane_detection/AdvancedLaneFinding.py", line 547, in <module>
+        output_clip.write_videofile(video_output, audio=False)
+    File "<decorator-gen-55>", line 2, in write_videofile
+    File "/home/ziwei/anaconda3/lib/python3.9/site-packages/moviepy/decorators.py", line 54, in requires_duration
+        return f(clip, *a, **k)
+    File "<decorator-gen-54>", line 2, in write_videofile
+    File "/home/ziwei/anaconda3/lib/python3.9/site-packages/moviepy/decorators.py", line 135, in use_clip_fps_by_default
+        return f(clip, *new_a, **new_kw)
+    File "<decorator-gen-53>", line 2, in write_videofile
+    File "/home/ziwei/anaconda3/lib/python3.9/site-packages/moviepy/decorators.py", line 22, in convert_masks_to_RGB
+        return f(clip, *a, **k)
+    File "/home/ziwei/anaconda3/lib/python3.9/site-packages/moviepy/video/VideoClip.py", line 264, in write_videofile
+        raise ValueError("MoviePy couldn't find the codec associated "
+    ValueError: MoviePy couldn't find the codec associated with the filename. Provide the 'codec' parameter in write_videofile.
+sol2: 
+
+
+
+### 4. to generate the mdlhoi dataset
+
+#### js_generator_double.py
+
+bug1:
+Intel MKL FATAL ERROR: Cannot load /home/ziwei/anaconda3/lib/python3.9/site-packages/mkl/../../../libmkl_rt.so.1.
+
+sol1: 
+S1. reinstall mkl with 1. "conda uninstall --force mkl mkl-service"
+                       2. "conda install mkl mkl-service"
+S2. restart the IDE
+
+
+
+
+bug2:
+
+Traceback (most recent call last):
+  File "/media/ziwei/yuankai/code/js_generator_double_mp.py", line 247, in <module>
+    GTlist.sort(key=lambda x:int(x[6:-4]))
+  File "/media/ziwei/yuankai/code/js_generator_double_mp.py", line 247, in <lambda>
+    GTlist.sort(key=lambda x:int(x[6:-4]))
+ValueError: invalid literal for int() with base 10: ''
+
+sol1: 1. Do not remove something in cvat e.g. mp_pick_up_4 works well
+

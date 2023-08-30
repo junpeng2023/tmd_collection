@@ -71,6 +71,10 @@ O2 if filename.endswith('.png'):
 cv2.cvtColor(<single_image>,<Color Space Conversions>)
 #--
 // <Color Space Conversions> O1 cv2.COLOR_BGR2GRAY
+e.g.1. #转变为HSV颜色空间
+img_hsv=cv2.cvtColor(img_original,cv2.COLOR_BGR2HSV)
+
+e.g.2. 
            
 1
 
@@ -152,7 +156,10 @@ cv2.rectangle()
 
 
 
+
+
 ``````
+
 
 
 ### 3.5 Display Window Operations
@@ -169,6 +176,23 @@ cv2.resizeWindow('findCorners', 640, 480)
 
 
 ``````
+
+### 3.6 detection
+
+```
+1.
+cv2.Canny()
+
+
+2.
+cv2.fillPoly()
+
+
+3.
+
+
+
+```
 
 ### 3-A Troubleshooting
 

@@ -211,6 +211,7 @@ conda activate base
 
 3.
 
+
 ```
 
 # 5.ROS
@@ -269,7 +270,9 @@ rosrun <> <>
    #-- to get the visualization of turtle
   O2 rosrun turtlesim turtle_teleop_key
    #-- to use keyboard to control the turtle
-  O3 
+  O3 rosrun image_view extract_images _sec_per_frame:=0.01 image:=<IMAGETOPICINBAGFILE>
+   #-- to extract frames from one rosbag file
+  O4 
 
 6. 
 #-- to tell the ROS that changes have been made in the workspace 
@@ -347,6 +350,12 @@ rostopic list
  #-- to get the publischers and subscribers
  O2 rostopic echo <>
  
+2.
+rostopic echo <topic_name>
+
+3.
+rostopic info <topic_name>
+
 
  
 ```
