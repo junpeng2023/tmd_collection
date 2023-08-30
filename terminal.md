@@ -386,7 +386,7 @@ python detect.py --source 0  # webcam
 python3 <>
 
 3.
-!python val.py --weights yolov5s.pt --data coco.yaml --img 640 --half
+python val.py --weights yolov5s.pt --data coco.yaml --img 640 --half
 #-- to validate a model's accuracy on the COCO dataset's val or test splits.
 
 

@@ -75,6 +75,7 @@ e.g.1. #转变为HSV颜色空间
 img_hsv=cv2.cvtColor(img_original,cv2.COLOR_BGR2HSV)
 
 e.g.2. 
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
            
 1
 
@@ -153,6 +154,7 @@ cv2.rectangle()
 #-- to draw bounding boxes or something equivalent
 
 2.
+cv2.circle()
 
 
 
@@ -182,6 +184,10 @@ cv2.resizeWindow('findCorners', 640, 480)
 ```
 1.
 cv2.Canny()
+#-- to do the edge detection with the output of a white/black one 
+e.g.1. edges = cv2.Canny(blurred, 50, 150)
+e.g.2. 
+
 
 
 2.
@@ -189,7 +195,36 @@ cv2.fillPoly()
 
 
 3.
+cv2.
 
+
+
+```
+
+### 3.7 shape changing
+
+
+```
+
+1.
+cv2.dilate()
+#-- to jiacu a line or word
+
+2.
+cv2.erode()
+#-- to bianxi a line or word
+
+
+
+
+```
+
+### 3.8 Noise reduction
+
+```
+
+# Gaussian blur to reduce noise
+blurred = cv2.GaussianBlur(gray, (5, 5), 0)
 
 
 ```
@@ -310,5 +345,25 @@ from common import splitfn
  ```
   -- use the DDP to speed up the training process
   
+ 
+ ```
+
+
+ ## 5. numpy
+
+ ### 5.1
+
+ ```
+ 1.
+ <>=np.array([])
+ e.g.1. 
+ lower_yellow = np.array([20, 100, 100])
+ upper_yellow = np.array([40, 255, 255])
+ 
+ 2.
+
+ e.g.1
+ mask = np.zeros_like(img)
+
  
  ```

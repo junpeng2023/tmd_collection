@@ -18,3 +18,5 @@ Q11 pilot_lane_detection.py modified to the version with HSV color space
 
 Q12
 
+Q20 comments for link_detector2.py for lane detection
+

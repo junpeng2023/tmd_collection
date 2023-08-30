@@ -72,14 +72,20 @@ cv2.error: OpenCV(4.7.0) :-1: error: (-5:Bad argument) in function 'imshow'
  
 ### 3. -- to get the lane detected
 weblink: 01. https://www.youtube.com/watch?v=mXH1u885bn8
+             
          #-- youtube video for duckietown lane following demo
+         O2. https://github.com/duckietown/sim-duckiebot-lanefollowing-demo/blob/master/custom_line_detector/include/line_detector/line_detector2.py
+         #-- the python file line_detector2.py which is for line detection of duckietown lane following demo
+
 
 #### idea1. use Hough Transformation
-
+weblink: O1. 
 
 #### idea2. use HSV detection?
 
-#### idea3. use 
+#### idea3. use YOLOv5
+
+weblink:
 
 
 #### idea4. test other gits 
