@@ -87,6 +87,7 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 1. 
 cv2.imread(<path_to_image_file>)
+#-- to read an image located in the filesystem into the code
 O1 cv.imread(imgpath)
 Bsp1. 
 imglist = png
@@ -97,10 +98,11 @@ imgpath=os.path.join(file,imglist[0])
 
 2.
 cv2.imshow('<title_for_display>',<image_file>)
+#-- to show the image or video in a window with title
 
 3.
 cv2.destroyAllWindows()
-#--
+#-- to remove the window which is not used any more after imshow()
 
 
 4.
@@ -108,7 +110,11 @@ cv2.waitKey()
 #-- to adjust the play speed when running the script and enable key operations
 O1 cv2.waitKey(0)&0xFF
 O2 cv2.waitKey(100)&0xFF
-O
+
+5.
+cv2.imwrite()
+#-- to write a image in the code into the filesystem
+
 ``````
 
 ### 3.3 camera_calibration
@@ -155,6 +161,9 @@ cv2.rectangle()
 
 2.
 cv2.circle()
+#-- to draw a point e.g. two sides of a lane
+
+3.
 
 
 
@@ -225,6 +234,7 @@ cv2.erode()
 
 # Gaussian blur to reduce noise
 blurred = cv2.GaussianBlur(gray, (5, 5), 0)
+
 
 
 ```

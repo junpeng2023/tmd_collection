@@ -372,6 +372,11 @@ rostopic info <topic_name>
 1.
 python train.py --img 640 --epochs 3 --data coco128.yaml --weights yolov5s.pt # aim: to train with & 1.--img 2.--epochs 3.--data 4.--weights 
 #-- detect.py runs YOLOv5 inference on a variety of sources, downloading models automatically from the latest YOLOv5 release, and saving results to runs/detect. Example inference sources are:
+ P1 --weights
+  O1 yolov5n.pt
+  O2 yolov5m.pt
+  O3 yolov5l.pt
+
 
 python detect.py --source 0  # webcam
                           img.jpg  # image 
@@ -388,6 +393,7 @@ python3 <>
 3.
 python val.py --weights yolov5s.pt --data coco.yaml --img 640 --half
 #-- to validate a model's accuracy on the COCO dataset's val or test splits.
+ P1 
 
 
 ```
@@ -434,6 +440,13 @@ docker run --rm hello-world
 
 5. 
 docker image list
+#-- to show all docker images activate
+
+
+6.
+docker container list
+#-- to show all docker container activate
+
 
 
 ```
@@ -607,7 +620,24 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
  e.g.1.
  ffmpeg -i input.mkv -filter:v "setpts=0.5*PTS" output.mkv
  #-- to adjust the speed of a video
+
+
+ 6.
+ ffmpeg -i <original_format> -c copy <target_format>
+ #-- to convert a video into another format
+ e.g.1.
+ ffmpeg -i example.mkv -c copy example.mp4
+
  ``````
+
+ ## 9.2 YOLOv5
+ ```
+ 1.
+ python3 detect.py --weights yolov5l.pt --source /media/ziwei/yuankai/RGB_video/mp/mp_cereal/mp_MB_3_2022-10-19-19-45-30_camera_color_image_raw_compressed.mp4 --view-img
+ #-- the terminal command for detection of a local video, show the video in a window and also store the data in runs/detect/exp11
+
+ 
+ ```
 
  # 10. File processing
 

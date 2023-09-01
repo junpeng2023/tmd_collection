@@ -1,6 +1,14 @@
 # Flow of projects
 
-## CV_project
+# 1. Installation of something on Ubuntu
+
+#### idea1. -- How to install something using anaconda
+
+bug1: version incompatible?
+
+# 2. CV_project
+
+## 1. Duckietown_project
 
 ### 1. -- to get the pcl Pointcloud with given depth and rgb frames
 
@@ -23,7 +31,7 @@ S3. to install the python3-pcl instead of python-pcl
  #-- how to get the package into anaconda
  S3-1 use "sudo apt-get install python3-pcl"
 
-S4
+S4 
 
 
 
@@ -80,12 +88,34 @@ weblink: 01. https://www.youtube.com/watch?v=mXH1u885bn8
 
 #### idea1. use Hough Transformation
 weblink: O1. 
+ 
+ ##### idea1.1 use part by part to draw the lines
+  weblink: O1.
+  bug1: python3 gb_HSV.py 
+Traceback (most recent call last):
+  File "/media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_lane_detection/gb_HSV.py", line 85, in <module>
+    for line in lines:
+TypeError: 'NoneType' object is not iterable
+   reason1: too small roi causes no line to draw?
+   sol1: 
+   bug2: no right lines cover up the whole lane for the lanes on the four corner?
+   bug3: cover too much than the original lane, e.g. for the xie lines
 
 #### idea2. use HSV detection?
 
 #### idea3. use YOLOv5
 
-weblink:
+weblink: *O1 https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
+             https://www.youtube.com/watch?v=MdF6x6ZmLAY
+         #-- to use ROBOflow to do annotations and get the dataset in YOLOv5 format
+         O2. https://www.youtube.com/watch?v=fu2tfOV9vbY
+         #-- How to detect in a local mp4 file with YOLOv5
+         tmd: python3 detect.py --weights yolov5l.pt --source /media/ziwei/yuankai/RGB_video/mp/mp_cereal/mp_MB_3_2022-10-19-19-45-30_camera_color_image_raw_compressed.mp4 --view-img
+         #-- the terminal command for detection and also store the data in runs/detect/exp11
+
+
+
+         O3. 
 
 
 #### idea4. test other gits 
@@ -122,8 +152,18 @@ weblink:
 sol2: 
 
 
+### 4. How to detect the middle line between two lanes
 
-### 4. to generate the mdlhoi dataset
+#### idea1 use opencv methods
+ weblink: O1 https://stackoverflow.com/questions/64396183/opencv-find-a-middle-line-of-a-contour-python
+          #-- contains some code for detecting the middle line of a contour
+          O2 gbt Q26
+          #-- use the hoi with height and width in a half and then use Hough transform to draw the lines 
+
+
+## 2. MDLHOI dataset project
+
+### 1. to generate the mdlhoi dataset
 
 #### js_generator_double.py
 
