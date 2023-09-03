@@ -159,6 +159,7 @@ sol2:
           #-- contains some code for detecting the middle line of a contour
           O2 gbt Q26
           #-- use the hoi with height and width in a half and then use Hough transform to draw the lines 
+          O3 
 
 
 ## 2. MDLHOI dataset project
