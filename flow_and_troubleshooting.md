@@ -1,5 +1,26 @@
 # Flow of projects
 
+# 0. How to collect materials
+
+## weblinks:
+```
+1.
+Youtube
+#-- useful for animation e.g. in project realization
+
+2.
+github
+#-- useful for code cloning
+
+
+3.
+CSDN
+#-- useful for looking for all kinds of technical tutorials and troubleshooting as well e.g. in YOLO
+
+
+
+```
+
 # 1. Installation of something on Ubuntu
 
 #### idea1. -- How to install something using anaconda
@@ -14,7 +35,7 @@ bug1: version incompatible?
 
 #### idea1. -- How to install the pcl package?
 
-weblink:
+/--weblink:
 1. https://tony-laoshi.github.io/pcl%E5%BA%93%E5%9C%A8ubuntu20.04%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/
 #-- with how to install all dependencies
 
@@ -38,16 +59,18 @@ S4
 
 #### idea2. -- to get the docker image for pcl and run on it
 
-bug1: docker image can not be run
+/--bug1: docker image can not be run
 
 
 ### 2. -- to get the rgb and depth frames from one given rosbag file
 
 #### idea1. use the file rosbag2video.py 
- weblink: https://github.com/mlaiacker/rosbag2video/tree/master
+
+``````
+ /--weblink: https://github.com/mlaiacker/rosbag2video/tree/master
  #-- git repository for rosbag2video.py
  S1 use the terminal command such as "python3 rosbag2video.py --fps 25 --rate 1 -t /camera/aligned_depth_to_color/image_raw mpmp_working_2_2022-10-19-20-26-59.bag "
- bug1: can not use -s in the tmd, otherwise with error message
+ /--bug1: can not use -s in the tmd, otherwise with error message
  "Traceback (most recent call last):
   File "/media/ziwei/PortableSSD/rosbag/mp/mp_working/rosbag2video.py", line 305, in <module>
     videowriter.addBag(bagfile)
@@ -61,8 +84,12 @@ cv2.error: OpenCV(4.7.0) :-1: error: (-5:Bad argument) in function 'imshow'
 
  S2 
 
+ ``````
+
  #### idea2. use the files such as bag2png_depth.py imported from the web browser
- weblink: *O1. https://idorobotics.com/2021/03/08/extracting-ros-bag-files-to-python/
+
+ ``````
+ /--weblink: *O1. https://idorobotics.com/2021/03/08/extracting-ros-bag-files-to-python/
           #-- to get the code for bag2csv and bag2png
           Steps: S1
           O2. https://gist.github.com/wngreene/835cda68ddd9c5416defce876a4d7dd9
@@ -71,62 +98,96 @@ cv2.error: OpenCV(4.7.0) :-1: error: (-5:Bad argument) in function 'imshow'
           #-- get the rosrun command to extract the frames into one folder
           O4. http://wiki.ros.org/rosbag/Tutorials/Exporting%20image%20and%20video%20data
           #-- to use the export_bad.launch to get the frames extracted
-          bug1: no rostopic "/file_version"
+ /--bug1: no rostopic "/file_version"
           O5.  
 
  file_link: 1. /media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_recording/25_bag2png.py
             2. /media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_recording/bag2png_depth.py
  
- 
+ ``````
+
 ### 3. -- to get the lane detected
-weblink: 01. https://www.youtube.com/watch?v=mXH1u885bn8
+
+``````
+/--weblink: 01. https://www.youtube.com/watch?v=mXH1u885bn8
              
          #-- youtube video for duckietown lane following demo
          O2. https://github.com/duckietown/sim-duckiebot-lanefollowing-demo/blob/master/custom_line_detector/include/line_detector/line_detector2.py
          #-- the python file line_detector2.py which is for line detection of duckietown lane following demo
 
+``````
 
 #### idea1. use Hough Transformation
-weblink: O1. 
+/--weblink: O1. 
  
  ##### idea1.1 use part by part to draw the lines
-  weblink: O1.
-  bug1: python3 gb_HSV.py 
+  /--weblink: O1.
+  /--bug1: python3 gb_HSV.py 
 Traceback (most recent call last):
   File "/media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_lane_detection/gb_HSV.py", line 85, in <module>
     for line in lines:
 TypeError: 'NoneType' object is not iterable
-   reason1: too small roi causes no line to draw?
-   sol1: 
-   bug2: no right lines cover up the whole lane for the lanes on the four corner?
-   bug3: cover too much than the original lane, e.g. for the xie lines
+   /--reason1: too small roi causes no line to draw?
+   /--sol1: 
+   /--bug2: no right lines cover up the whole lane for the lanes on the four corner?
+   /--bug3: cover too much than the original lane, e.g. for the xie lines
 
 #### idea2. use HSV detection?
 
 #### idea3. use YOLOv5
 
-weblink: *O1 https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
+
+/--weblink: /*O1 https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
              https://www.youtube.com/watch?v=MdF6x6ZmLAY
          #-- to use ROBOflow to do annotations and get the dataset in YOLOv5 format
          O2. https://www.youtube.com/watch?v=fu2tfOV9vbY
          #-- How to detect in a local mp4 file with YOLOv5
          tmd: python3 detect.py --weights yolov5l.pt --source /media/ziwei/yuankai/RGB_video/mp/mp_cereal/mp_MB_3_2022-10-19-19-45-30_camera_color_image_raw_compressed.mp4 --view-img
          #-- the terminal command for detection and also store the data in runs/detect/exp11
+          
+
+
+         /*O3. https://blog.csdn.net/m0_53392188/article/details/119334634?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169376041016800213066318%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169376041016800213066318&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-119334634-null-null.142^v93^control&utm_term=yolov5%E4%BF%9D%E5%A7%86&spm=1018.2226.3001.4187
+         #-- tutorial in YOLO about how to train in YOLO and detect
 
 
 
-         O3. 
+
+/--bug1:
+ pip install pyqt5
+Collecting pyqt5
+  Downloading PyQt5-5.15.9-cp37-abi3-manylinux_2_17_x86_64.whl (8.4 MB)
+     |████████████████████████████████| 8.4 MB 5.4 MB/s 
+Collecting PyQt5-Qt5>=5.15.2
+  Downloading PyQt5_Qt5-5.15.2-py3-none-manylinux2014_x86_64.whl (59.9 MB)
+     |████████████████████████████████| 59.9 MB 100 kB/s 
+Collecting PyQt5-sip<13,>=12.11
+  Downloading PyQt5_sip-12.12.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl (335 kB)
+     |████████████████████████████████| 335 kB 38.9 MB/s 
+Installing collected packages: PyQt5-sip, PyQt5-Qt5, pyqt5
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+spyder 5.1.5 requires pyqtwebengine<5.13, which is not installed.
+spyder 5.1.5 requires pyqt5<5.13, but you have pyqt5 5.15.9 which is incompatible.
+
+/--susp1: pip install 'PyQt5<5.13'
+
+
+/--result1: the result best.pt and last.pt have been stored into the '/media/ziwei/PortableSSD/Junpeng/from_git/yolov5/runs/train/exp4/weights/best.pt'
+/--result2: the result of detection of duckiebot has been stored into '/media/ziwei/PortableSSD/Junpeng/from_git/yolov5/runs/detect/exp14
+'
+
+
 
 
 #### idea4. test other gits 
 
  ##### 1. AdvancedLaneFinding.py
  #-- to
- bug1: inotify_add_watch(...) failed: "No space left on device
- sol1: in gbt Q15
+ /--bug1: inotify_add_watch(...) failed: "No space left on device
+ /--sol1: in gbt Q15
   S1. 
 
- bug2:
+ /--bug2:
     Traceback (most recent call last):
     File "/home/ziwei/anaconda3/lib/python3.9/site-packages/moviepy/video/VideoClip.py", line 262, in write_videofile
         codec = extensions_dict[ext]['codec'][0]
@@ -155,7 +216,7 @@ sol2:
 ### 4. How to detect the middle line between two lanes
 
 #### idea1 use opencv methods
- weblink: O1 https://stackoverflow.com/questions/64396183/opencv-find-a-middle-line-of-a-contour-python
+ /--weblink: O1 https://stackoverflow.com/questions/64396183/opencv-find-a-middle-line-of-a-contour-python
           #-- contains some code for detecting the middle line of a contour
           O2 gbt Q26
           #-- use the hoi with height and width in a half and then use Hough transform to draw the lines 
@@ -168,10 +229,10 @@ sol2:
 
 #### js_generator_double.py
 
-bug1:
+/--bug1:
 Intel MKL FATAL ERROR: Cannot load /home/ziwei/anaconda3/lib/python3.9/site-packages/mkl/../../../libmkl_rt.so.1.
 
-sol1: 
+/--sol1: 
 S1. reinstall mkl with 1. "conda uninstall --force mkl mkl-service"
                        2. "conda install mkl mkl-service"
 S2. restart the IDE
@@ -179,7 +240,7 @@ S2. restart the IDE
 
 
 
-bug2:
+/--bug2:
 
 Traceback (most recent call last):
   File "/media/ziwei/yuankai/code/js_generator_double_mp.py", line 247, in <module>

@@ -709,4 +709,18 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
 
 ```
 
+# 13. pip
+
+```
+1.
+pip install <package>
+ A1 pip install `<package><<one_version>`
+ e.g.1. pip install 'PyQt5<5.13'
+
+
+
+
+
+```
+
 
