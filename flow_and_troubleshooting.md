@@ -36,23 +36,27 @@ bug1: version incompatible?
 #### idea1. -- How to install the pcl package?
 
 /--weblink:
-1. https://tony-laoshi.github.io/pcl%E5%BA%93%E5%9C%A8ubuntu20.04%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/
+--O1 https://tony-laoshi.github.io/pcl%E5%BA%93%E5%9C%A8ubuntu20.04%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85/
 #-- with how to install all dependencies
 
-S1. sudo apt install libpcl-dev
+--S1. sudo apt install libpcl-dev
 
-S2. installing the python pcl
+--S2. installing the python pcl
  O1 pip install python-pcl -vvvv
  bug1: errors with pcl common
   sol1: pip install python-pcl -vvvv
   sol2: 
 
-S3. to install the python3-pcl instead of python-pcl
+--S3. to install the python3-pcl instead of python-pcl
  weblink: https://blog.csdn.net/zsssrs/article/details/120054425
  #-- how to get the package into anaconda
- S3-1 use "sudo apt-get install python3-pcl"
+ --S3-1 use "sudo apt-get install python3-pcl"
 
-S4 
+--S4
+
+--S5
+
+
 
 
 
@@ -89,39 +93,40 @@ cv2.error: OpenCV(4.7.0) :-1: error: (-5:Bad argument) in function 'imshow'
  #### idea2. use the files such as bag2png_depth.py imported from the web browser
 
  ``````
- /--weblink: *O1. https://idorobotics.com/2021/03/08/extracting-ros-bag-files-to-python/
+ /--weblink: --*O1. https://idorobotics.com/2021/03/08/extracting-ros-bag-files-to-python/
           #-- to get the code for bag2csv and bag2png
           Steps: S1
-          O2. https://gist.github.com/wngreene/835cda68ddd9c5416defce876a4d7dd9
+          --O2. https://gist.github.com/wngreene/835cda68ddd9c5416defce876a4d7dd9
           #-- to get the file bag_to_images.py and their Q&A
-          O3. https://coderwall.com/p/qewf6g/how-to-extract-images-from-a-rosbag-file-and-convert-them-to-video
+          --O3. https://coderwall.com/p/qewf6g/how-to-extract-images-from-a-rosbag-file-and-convert-them-to-video
           #-- get the rosrun command to extract the frames into one folder
-          O4. http://wiki.ros.org/rosbag/Tutorials/Exporting%20image%20and%20video%20data
+          --O4. http://wiki.ros.org/rosbag/Tutorials/Exporting%20image%20and%20video%20data
           #-- to use the export_bad.launch to get the frames extracted
  /--bug1: no rostopic "/file_version"
-          O5.  
+          --O5.  
 
- file_link: 1. /media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_recording/25_bag2png.py
-            2. /media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_recording/bag2png_depth.py
+ file_link: --1. /media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_recording/25_bag2png.py
+            --2. /media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_recording/bag2png_depth.py
  
  ``````
 
 ### 3. -- to get the lane detected
 
 ``````
-/--weblink: 01. https://www.youtube.com/watch?v=mXH1u885bn8
+/--weblink: --01. https://www.youtube.com/watch?v=mXH1u885bn8
              
          #-- youtube video for duckietown lane following demo
-         O2. https://github.com/duckietown/sim-duckiebot-lanefollowing-demo/blob/master/custom_line_detector/include/line_detector/line_detector2.py
+         --O2. https://github.com/duckietown/sim-duckiebot-lanefollowing-demo/blob/master/custom_line_detector/include/line_detector/line_detector2.py
          #-- the python file line_detector2.py which is for line detection of duckietown lane following demo
-
+         --O3 https://stackoverflow.com/questions/45322630/how-to-detect-lines-in-opencv
+         #-- with code to detect thin white lines
 ``````
 
 #### idea1. use Hough Transformation
-/--weblink: O1. 
+/--weblink: --O1. 
  
  ##### idea1.1 use part by part to draw the lines
-  /--weblink: O1.
+  /--weblink: --O1.
   /--bug1: python3 gb_HSV.py 
 Traceback (most recent call last):
   File "/media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_lane_detection/gb_HSV.py", line 85, in <module>
@@ -133,7 +138,7 @@ TypeError: 'NoneType' object is not iterable
    /--bug3: cover too much than the original lane, e.g. for the xie lines
 
 #### idea2. use HSV detection?
-
+    /-- 
 #### idea3. use YOLOv5
 
 
@@ -149,6 +154,19 @@ TypeError: 'NoneType' object is not iterable
 
          /*O3. https://blog.csdn.net/m0_53392188/article/details/119334634?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169376041016800213066318%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169376041016800213066318&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-119334634-null-null.142^v93^control&utm_term=yolov5%E4%BF%9D%E5%A7%86&spm=1018.2226.3001.4187
          #-- tutorial in YOLO about how to train in YOLO and detect
+
+/--bug1: no labels found by running train.py
+/--sol1: --1. check whether all json files have been converted to txt format.
+         --2. check whether whether the path inside the json2txt.py has a "/" when trying to append a directory for txt files
+           e.g. txt_name = '/media/ziwei/PortableSSD/Junpeng/from_git/yolov5/duckiebot/datasets/labels/train/' + json_name[0:-5] + '.txt' 
+
+#### idea4. draw Hough lines based on the result of canny detection
+
+
+/-- bug1: no ROI8
+/-- sol1: use the file inside duckietown_cv instead of duckietown_cv_lislab
+
+
 
 
 
@@ -179,7 +197,8 @@ spyder 5.1.5 requires pyqt5<5.13, but you have pyqt5 5.15.9 which is incompatibl
 
 
 
-#### idea4. test other gits 
+
+#### idea5. test other gits 
 
  ##### 1. AdvancedLaneFinding.py
  #-- to
@@ -221,6 +240,22 @@ sol2:
           O2 gbt Q26
           #-- use the hoi with height and width in a half and then use Hough transform to draw the lines 
           O3 
+
+
+### 5. How to get the speed of the bot
+
+#### idea1 use optical flow obtained by depth information
+
+ /--weblink: 
+ `````` 
+ --O1 gbt CV project plus Q61 
+ --O2
+ `````` 
+ /--bug1: pyrealsense2 package missing by vscode
+ /--susp1: conda install -c conda-forge librealsense
+   //-- bug1: can not be installed
+ /--sol1: pip install pyrealsense2
+ /--
 
 
 ## 2. MDLHOI dataset project
