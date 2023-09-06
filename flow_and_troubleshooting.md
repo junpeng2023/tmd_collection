@@ -158,7 +158,9 @@ TypeError: 'NoneType' object is not iterable
 /--bug1: no labels found by running train.py
 /--sol1: --1. check whether all json files have been converted to txt format.
          --2. check whether whether the path inside the json2txt.py has a "/" when trying to append a directory for txt files
-           e.g. txt_name = '/media/ziwei/PortableSSD/Junpeng/from_git/yolov5/duckiebot/datasets/labels/train/' + json_name[0:-5] + '.txt' 
+           e.g. txt_name = '/media/ziwei/PortableSSD/Junpeng/from_git/yolov5/duckiebot/datasets/labels/train/' + json_name[0:-5] + '.txt'
+           
+            
 
 #### idea4. draw Hough lines based on the result of canny detection
 
