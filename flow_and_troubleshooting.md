@@ -147,9 +147,13 @@ TypeError: 'NoneType' object is not iterable
          #-- to use ROBOflow to do annotations and get the dataset in YOLOv5 format
          O2. https://www.youtube.com/watch?v=fu2tfOV9vbY
          #-- How to detect in a local mp4 file with YOLOv5
-         tmd: python3 detect.py --weights yolov5l.pt --source /media/ziwei/yuankai/RGB_video/mp/mp_cereal/mp_MB_3_2022-10-19-19-45-30_camera_color_image_raw_compressed.mp4 --view-img
+         tmd: 
+         --e.g.1. python3 detect.py --weights yolov5l.pt --source /media/ziwei/yuankai/RGB_video/mp/mp_cereal/mp_MB_3_2022-10-19-19-45-30_camera_color_image_raw_compressed.mp4 --view-img
          #-- the terminal command for detection and also store the data in runs/detect/exp11
-          
+         --e.g.2. python3 detect.py --weights runs/train/exp7/weights/best.pt --data duckiebot/duckiebot_parameter.yaml --source duckiebot/datasets/images/train
+         #-- the tmd to detect duckiebots on a custom dataset created by myself
+         
+ 
 
 
          /*O3. https://blog.csdn.net/m0_53392188/article/details/119334634?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169376041016800213066318%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169376041016800213066318&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-119334634-null-null.142^v93^control&utm_term=yolov5%E4%BF%9D%E5%A7%86&spm=1018.2226.3001.4187
