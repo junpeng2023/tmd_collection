@@ -142,7 +142,9 @@ TypeError: 'NoneType' object is not iterable
 #### idea3. use YOLOv5
 
 
-/--weblink: /*O1 https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
+/--weblink: 
+```
+/*O1 https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
              https://www.youtube.com/watch?v=MdF6x6ZmLAY
          #-- to use ROBOflow to do annotations and get the dataset in YOLOv5 format
          O2. https://www.youtube.com/watch?v=fu2tfOV9vbY
@@ -158,6 +160,10 @@ TypeError: 'NoneType' object is not iterable
 
          /*O3. https://blog.csdn.net/m0_53392188/article/details/119334634?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169376041016800213066318%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169376041016800213066318&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-119334634-null-null.142^v93^control&utm_term=yolov5%E4%BF%9D%E5%A7%86&spm=1018.2226.3001.4187
          #-- tutorial in YOLO about how to train in YOLO and detect
+
+
+```
+
 
 /--bug1: no labels found by running train.py
 /--sol1: --1. check whether all json files have been converted to txt format.
@@ -262,6 +268,17 @@ sol2:
    //-- bug1: can not be installed
  /--sol1: pip install pyrealsense2
  /--
+
+
+ ### 6. How to realize the real-time detection
+
+#### idea1 using YOLOv5
+
+ ```
+  
+ 
+ 
+ ```
 
 
 ## 2. MDLHOI dataset project

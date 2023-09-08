@@ -377,7 +377,11 @@ python train.py --img 640 --epochs 3 --data coco128.yaml --weights yolov5s.pt # 
   O2 yolov5m.pt
   O3 yolov5l.pt
 
+O1 python3 train.py
+#-- to run the script after getting all the files(e.g. .yaml files) changed
 
+
+2,
 python detect.py --source 0  # webcam
                           img.jpg  # image 
                           vid.mp4  # video
@@ -387,8 +391,16 @@ python detect.py --source 0  # webcam
                          'https://youtu.be/Zgi9g1ksQHc'  # YouTube
                          'rtsp://example.com/media.mp4'  # RTSP, RTMP, HTTP stream
 
-2.
-python3 <>
+O1 python3 detect.py --weights yolov5l.pt --source /media/ziwei/yuankai/RGB_video/mp/mp_cereal/mp_MB_3_2022-10-19-19-45-30_camera_color_image_raw_compressed.mp4 --view-img
+#-- to detect a video in the local directory with the default dataset with window to show the result of detection while running the code
+
+O2 python3 detect.py --weights runs/train/exp7/weights/best.pt --data duckiebot/duckiebot_parameter.yaml --source duckiebot/datasets/images/train
+#-- to detect some frames inside the local directory with the custom dataset created by myself using labelme
+
+O3 python3 detect.py --weights runs/train/exp7/weights/best.pt --data duckiebot/duckiebot_parameter.yaml --source 0
+#-- to detect realtime with the camera using the custom dataset created
+
+
 
 3.
 python val.py --weights yolov5s.pt --data coco.yaml --img 640 --half
