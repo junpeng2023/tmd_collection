@@ -110,10 +110,27 @@ cv2.waitKey()
 #-- to adjust the play speed when running the script and enable key operations
 O1 cv2.waitKey(0)&0xFF
 O2 cv2.waitKey(100)&0xFF
+O3 cv2.waitKey(1)
 
 5.
 cv2.imwrite()
 #-- to write a image in the code into the filesystem
+
+6.
+cv2.namedWindow('<title_for_display>',<type>)
+#-- to display the images in a window, whose size can be changed unlike the cv2.imshow()
+e.g.1.
+cv2.namedWindow("Detected lanes", cv2.WINDOW_NORMAL)
+
+V2:<type>
+O1.cv2.WINDOW_NORMAL
+#-- to randomly set the size of the window
+/--weblink: O1 https://blog.csdn.net/fanjiule/article/details/81606596
+            #-- a csdn website to show how to use the cv2.namedWindow
+
+O2.
+
+
 
 ``````
 

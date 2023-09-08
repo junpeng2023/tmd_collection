@@ -126,6 +126,8 @@ cv2.error: OpenCV(4.7.0) :-1: error: (-5:Bad argument) in function 'imshow'
 /--weblink: --O1. 
  
  ##### idea1.1 use part by part to draw the lines
+
+ ```
   /--weblink: --O1.
   /--bug1: python3 gb_HSV.py 
 Traceback (most recent call last):
@@ -137,12 +139,16 @@ TypeError: 'NoneType' object is not iterable
    /--bug2: no right lines cover up the whole lane for the lanes on the four corner?
    /--bug3: cover too much than the original lane, e.g. for the xie lines
 
+```
 #### idea2. use HSV detection?
     /-- 
 #### idea3. use YOLOv5
 
 
-/--weblink: /*O1 https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
+
+/--weblink: 
+```
+/*O1 https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
              https://www.youtube.com/watch?v=MdF6x6ZmLAY
          #-- to use ROBOflow to do annotations and get the dataset in YOLOv5 format
          O2. https://www.youtube.com/watch?v=fu2tfOV9vbY
@@ -158,6 +164,10 @@ TypeError: 'NoneType' object is not iterable
 
          /*O3. https://blog.csdn.net/m0_53392188/article/details/119334634?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169376041016800213066318%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169376041016800213066318&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-119334634-null-null.142^v93^control&utm_term=yolov5%E4%BF%9D%E5%A7%86&spm=1018.2226.3001.4187
          #-- tutorial in YOLO about how to train in YOLO and detect
+
+
+```
+
 
 /--bug1: no labels found by running train.py
 /--sol1: --1. check whether all json files have been converted to txt format.
@@ -262,6 +272,77 @@ sol2:
    //-- bug1: can not be installed
  /--sol1: pip install pyrealsense2
  /--
+
+#### idea2 simply use YOLOv5 to detect and estimate
+
+ /--weblink:
+ ```
+ *--O1. literature_dir: '/home/junpeng/Documents/to_git/duckietown_cv_lislab/literature/pose&speed_estimation/vision_based...pdf'
+          #-- an essay with speed estimation
+  //--chapter: IV. VEHICLE SPEED ESTIMATION BASED ON RNN WITH YOLO BOUNDING BOXES
+   k1. deep learning method
+   k2. fine-tuning of YOLO v5m on the Vehicles-OpenImages dataset
+   **--k3. extract three features to be used for vehicle speed estimation, equivalent to coordinates of the lower-left and upper-right vertices of the bounding box 
+    --k3-1. bounding box area
+    --k3-2. x-coordinate of the lower left vertex and
+    --k3-3. y-coordinate of the lower left vertex
+   --k4 advantage the proposed methods
+       e.g.  it does not require prior knowledge of real-world dimensions such as vehicle size, road width, camera distance and angle in relation to the road.
+    ///--fig
+    O1 Fig. 3. Features extracted from video useing YOLO
+    #-- with the frame plot of three features mentioned above
+
+ --O2. 
+
+
+ ```
+
+ ### 6. How to realize the real-time detection
+
+#### idea1 using YOLOv5
+
+ ```
+  
+ 
+ 
+ ```
+
+
+ ### 7. How to get the segmentation (e.g. instance segmentation) of the lanes
+
+ #### idea1. use instance segmentation
+
+ ```
+ /--weblinks: 
+ O1. https://journalofcloudcomputing.springeropen.com/articles/10.1186/s13677-020-00172-z
+ #-- essay about instance segementation using CNN methods
+ with literature_dir: '/home/junpeng/Documents/to_git/duckietown_cv_lislab/literature/instance_segmentation/CNN based....pdf'
+
+ O2. 
+ 
+ ```
+
+ #### idea2. use lane assist
+
+ ```
+ /--weblinks: 
+  --O1. https://github.com/topics/lane-keeping-assistant
+ #-- contains three gits about the lane assist
+   --O1-1 https://github.com/A-Raafat/Torcs---Reinforcement-Learning-using-Q-Learning
+   #-- git with figures showing the scene from upside down
+   --O1-2 
+ *--O2. https://junshengfu.github.io/driving-lane-departure-warning/
+ #-- git with great visualisation of the segmented areas, but in the auto's sites instead of the warped site that we want
+   --O2-1 https://www.youtube.com/watch?v=fqQFVK4ZxoQ
+   --O2-2 https://www.youtube.com/watch?v=3-CMwxaScEo
+   #--demo videos with the segmented regions change colors
+
+ *--O3. https://github.com/ibaiGorordo/Ultrafast-Lane-Detection-Inference-Pytorch-
+  #-- git with visualisation of the segmented areas, but in the auto's sites instead of the warped site that we want
+
+
+
+ ```
 
 
 ## 2. MDLHOI dataset project
