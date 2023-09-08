@@ -145,7 +145,10 @@ TypeError: 'NoneType' object is not iterable
 #### idea3. use YOLOv5
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fcee754ba5a58c2f596e5c5c4abb465405a60a87
 /--weblink: 
 ```
 /*O1 https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
@@ -342,6 +345,17 @@ sol2:
 
 
 
+ ```
+
+
+ ### 6. How to realize the real-time detection
+
+#### idea1 using YOLOv5
+
+ ```
+  
+ 
+ 
  ```
 
 
