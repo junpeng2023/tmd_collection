@@ -158,11 +158,18 @@ TypeError: 'NoneType' object is not iterable
          #-- the terminal command for detection and also store the data in runs/detect/exp11
          --e.g.2. python3 detect.py --weights runs/train/exp7/weights/best.pt --data duckiebot/duckiebot_parameter.yaml --source duckiebot/datasets/images/train
          #-- the tmd to detect duckiebots on a custom dataset created by myself
-         
- 
+         /--file_location: the output are located in
+         --O1 /media/ziwei/PortableSSD/Junpeng/from_git/yolov5/runs/detect/exp14
+         #-- frames detected by the duckie dataset
+         --O2 /media/ziwei/PortableSSD/Junpeng/from_git/yolov5/runs/detect/exp16
+         #-- image files of the first bot moving detection with frames
+         --O3 /media/ziwei/PortableSSD/Junpeng/from_git/yolov5/runs/detect/exp19/my_video-11.mp4
+         #-- the dir for the second bot moving video
+           
 
 
-         /*O3. https://blog.csdn.net/m0_53392188/article/details/119334634?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169376041016800213066318%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169376041016800213066318&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-119334634-null-null.142^v93^control&utm_term=yolov5%E4%BF%9D%E5%A7%86&spm=1018.2226.3001.4187
+
+         */--O3. https://blog.csdn.net/m0_53392188/article/details/119334634?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169376041016800213066318%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169376041016800213066318&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-119334634-null-null.142^v93^control&utm_term=yolov5%E4%BF%9D%E5%A7%86&spm=1018.2226.3001.4187
          #-- tutorial in YOLO about how to train in YOLO and detect
 
 
@@ -302,6 +309,12 @@ sol2:
 #### idea1 using YOLOv5
 
  ```
+  O1.
+  python3 detect.py --weights runs/train/exp7/weights/best.pt --data duckiebot/duckiebot_parameter.yaml --source 0
+  #-- --source 0 means that it is for the webcam
+
+  /--bug1. no module named torch, trackback when importing torch on the main PC of LIS
+  /--susp1: 
   
  
  
