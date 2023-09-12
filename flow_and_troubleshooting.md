@@ -218,10 +218,40 @@ spyder 5.1.5 requires pyqt5<5.13, but you have pyqt5 5.15.9 which is incompatibl
 '
 
 
+#### idea5. detect and draw contours based on canny detection
+
+##### file1. pilot_lane_detection.py
+
+/--bug1:
+
+```
+[ WARN:0@0.009] global loadsave.cpp:244 findDecoder imread_('/home/junpeng/Documents/to_git/duckietown_cv/images/for_detection/frame02.jpg'): can't open/read file: check file path/integrity
+Traceback (most recent call last):
+  File "/media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_lane_detection/pilot_lane_detection.py", line 22, in <module>
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+cv2.error: OpenCV(4.7.0) /io/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+
+```
+
+/--reason1: 
+
+```
+wrong or no directory
+as the PC can be different and accordingly also the directory
+
+```
+
+/--sol1:
+```
+change the directory to the local PC
+e.g. image= cv2.imread('/media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/images/for_detection/frame06.jpg')
+
+```
 
 
 
-#### idea5. test other gits 
+#### idea6. test other gits 
 
  ##### 1. AdvancedLaneFinding.py
  #-- to
@@ -331,7 +361,10 @@ sol2:
  #-- essay about instance segementation using CNN methods
  with literature_dir: '/home/junpeng/Documents/to_git/duckietown_cv_lislab/literature/instance_segmentation/CNN based....pdf'
 
- O2. 
+ O2. https://github.com/facebookresearch/detectron2
+ #-- the github page of the detectron2
+ with literature_dir: ''
+
  
  ```
 

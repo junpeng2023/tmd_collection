@@ -410,7 +410,11 @@ O2 python3 detect.py --weights runs/train/exp7/weights/best.pt --data duckiebot/
 O3 python3 detect.py --weights runs/train/exp7/weights/best.pt --data duckiebot/duckiebot_parameter.yaml --source 0
 #-- to detect realtime with the camera using the custom dataset created
 
-
+O4 1.
+ python3 detect.py --weights yolov5l.pt --source /media/ziwei/yuankai/RGB_video/mp/mp_cereal/mp_MB_3_2022-10-19-19-45-30_camera_color_image_raw_compressed.mp4 --view-img
+ #-- the terminal command for detection of a local video, show the video in a window and also store the data in runs/detect/exp11
+ 
+/--bug1: Do not choose the --view-img when trying to detect on the image files, as we will get endless windows shown at the same time leading to a disastrous stuck
 
 3.
 python val.py --weights yolov5s.pt --data coco.yaml --img 640 --half
@@ -652,12 +656,9 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
 
  ``````
 
- ## 9.2 YOLOv5
+ 
  ```
- 1.
- python3 detect.py --weights yolov5l.pt --source /media/ziwei/yuankai/RGB_video/mp/mp_cereal/mp_MB_3_2022-10-19-19-45-30_camera_color_image_raw_compressed.mp4 --view-img
- #-- the terminal command for detection of a local video, show the video in a window and also store the data in runs/detect/exp11
-
+ 
  
  ```
 
