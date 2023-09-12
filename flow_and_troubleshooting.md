@@ -176,11 +176,17 @@ TypeError: 'NoneType' object is not iterable
 ```
 
 
-/--bug1: no labels found by running train.py
-/--sol1: --1. check whether all json files have been converted to txt format.
+/--bug1:
+```
+ no labels found by running train.py
+```
+
+/--sol1: 
+```
+--1. check whether all json files have been converted to txt format.
          --2. check whether whether the path inside the json2txt.py has a "/" when trying to append a directory for txt files
            e.g. txt_name = '/media/ziwei/PortableSSD/Junpeng/from_git/yolov5/duckiebot/datasets/labels/train/' + json_name[0:-5] + '.txt'
-           
+```           
             
 
 #### idea4. draw Hough lines based on the result of canny detection
@@ -195,6 +201,8 @@ TypeError: 'NoneType' object is not iterable
 
 
 /--bug1:
+
+```
  pip install pyqt5
 Collecting pyqt5
   Downloading PyQt5-5.15.9-cp37-abi3-manylinux_2_17_x86_64.whl (8.4 MB)
@@ -209,7 +217,7 @@ Installing collected packages: PyQt5-sip, PyQt5-Qt5, pyqt5
 ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
 spyder 5.1.5 requires pyqtwebengine<5.13, which is not installed.
 spyder 5.1.5 requires pyqt5<5.13, but you have pyqt5 5.15.9 which is incompatible.
-
+```
 /--susp1: pip install 'PyQt5<5.13'
 
 
