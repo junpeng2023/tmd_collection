@@ -427,3 +427,73 @@ ValueError: invalid literal for int() with base 10: ''
 
 sol1: 1. Do not remove something in cvat e.g. mp_pick_up_4 works well
 
+
+
+### 2. to generate a video with HOI segment
+
+#### file1: demo_double_anno_time.py
+
+/--bug1.
+
+```
+Traceback (most recent call last):
+  File "/media/ziwei/yuankai/code/demo_double_anno_time.py", line 129, in <module>
+    frame_action_next_2.append(To_print[key_number_2][2])
+IndexError: list index out of range
+
+```
+
+/--sol1: 
+
+```
+ current_actuation_time_2.append(((slice_change_2-i)/slice_change_2)*slices_time[key_number_2-1])
+        next_actuation_time_2.append(slices_time[key_number_2])
+        third_actuation_time_2.append(slices_time[key_number_2+1])
+        frame_action_now_2.append(To_print[key_number_2-1][2])
+        frame_object_now_2.append(To_print[key_number_2-1][3])
+        if len(To_print[key_number_2])>2 and len(To_print[key_number_2+1])>2:
+            frame_action_next_2.append(To_print[key_number_2][2])
+            frame_object_next_2.append(To_print[key_number_2][3])
+            frame_action_third_2.append(To_print[(key_number_2)+1][2])
+            frame_object_third_2.append(To_print[(key_number_2)+1][3])
+        else:
+            frame_action_next_2.append(To_print[key_number_2][0])
+            frame_object_next_2.append(To_print[key_number_2][1])
+            frame_action_third_2.append(To_print[(key_number_2)+1][0])
+            frame_object_third_2.append(To_print[(key_number_2)+1][1])
+
+
+```
+
+
+/--bug2: overlap of put Texts
+
+/--sol1: 
+```
+to use the value after the '<' in the () of cv2.putText
+
+e.g.
+cv2.putText(image,"current HOI segment: "+"<" +"Human 2, " + action_label[frame_action_now_2[j]]+" ,"+object_label[frame_object_now_2[j]]+" ,"+str(format(current_actuation_time_2[j]))+" >",(0,240), font,0.75, (0,0,255),2)
+
+```
+
+### 3. to extract depth png files from the bag files
+
+#### file1: bag2png_depth.py
+
+/--bug1: 
+
+```
+Traceback (most recent call last):
+  File "/media/ziwei/PortableSSD/Junpeng/to_git/duckietown_git/duckietown_cv/code_recording/bag2png_depth.py", line 20, in <module>
+    next_timestamp = bag.get_start_time()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rosbag/bag.py", line 802, in get_start_time
+    raise ROSBagException('Bag contains no message')
+rosbag.bag.ROSBagException: Bag contains no message
+
+
+```
+
+/--sol1: check the data integrity in the bag file (rosbag info <>)
+
+
