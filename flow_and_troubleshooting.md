@@ -148,10 +148,10 @@ TypeError: 'NoneType' object is not iterable
 
 /--weblink: 
 ```
-/*O1 https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
+/*--O1 https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
              https://www.youtube.com/watch?v=MdF6x6ZmLAY
          #-- to use ROBOflow to do annotations and get the dataset in YOLOv5 format
-         O2. https://www.youtube.com/watch?v=fu2tfOV9vbY
+         --O2. https://www.youtube.com/watch?v=fu2tfOV9vbY
          #-- How to detect in a local mp4 file with YOLOv5
          tmd: 
          --e.g.1. python3 detect.py --weights yolov5l.pt --source /media/ziwei/yuankai/RGB_video/mp/mp_cereal/mp_MB_3_2022-10-19-19-45-30_camera_color_image_raw_compressed.mp4 --view-img
@@ -171,6 +171,10 @@ TypeError: 'NoneType' object is not iterable
 
          */--O3. https://blog.csdn.net/m0_53392188/article/details/119334634?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169376041016800213066318%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=169376041016800213066318&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-119334634-null-null.142^v93^control&utm_term=yolov5%E4%BF%9D%E5%A7%86&spm=1018.2226.3001.4187
          #-- tutorial in YOLO about how to train in YOLO and detect
+         --O4 https://www.hindawi.com/journals/misy/2022/1828848/
+         #-- a demo with yolo_txt figure for data visualisation
+
+
 
 
 ```
@@ -302,6 +306,8 @@ sol2:
           #-- use the hoi with height and width in a half and then use Hough transform to draw the lines 
           O3 
 
+  #### idea 2 use the cv2.boundingRect(cnt)
+
 
 ### 5. How to get the speed of the bot
 
@@ -337,7 +343,16 @@ sol2:
     O1 Fig. 3. Features extracted from video useing YOLO
     #-- with the frame plot of three features mentioned above
 
- --O2. 
+ --O2. https://github.com/ultralytics/yolov5/issues/10510
+  #-- a git forum for the Q&A of the speed estimation and in/out of an area
+   /-- susp1: Simple Inference Example from glenn-jocher
+
+  --O3. https://www.youtube.com/watch?v=E1ZNbsIr6Bo
+  #-- youtube video for the visualisation of the speed detection and also the ID 
+  
+  --O4. https://ieeexplore.ieee.org/document/9486316
+  #-- distance measurement with an essay in IEEE
+  
 
 
  ```
@@ -354,7 +369,7 @@ sol2:
   /--bug1. no module named torch, trackback when importing torch on the main PC of LIS
   /--susp1: 
   
- 
+  
  
  ```
 
@@ -396,6 +411,18 @@ sol2:
 
 
 
+ ```
+
+ #### idea3. use semantic segmentation
+
+ /--weblinks:
+
+ ```
+ --O1. https://github.com/kulkarnikeerti/SegNet-Semantic-Segmentation
+  ## git for SegNet
+
+ 
+ 
  ```
 
 
