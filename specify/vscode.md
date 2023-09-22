@@ -350,6 +350,24 @@ from common import splitfn
  --- to use less images selected in a smaller range instead of using frames of a whole video
  --- use the cv2.destroyWindow, otherwise the display imshow would not cease
 
+### 3.9 multiple images
+
+```
+1.
+cv2.addWeighted()
+#-- get two images together
+e.g.1 
+complete = cv2.addWeighted(initial_img, alpha, line_image, beta, lambda)
+
+
+2.
+cv2.bitwise_and()
+
+3.
+cv2.bitwise_or()
+
+```
+
 
 ## 4. CUDA
 

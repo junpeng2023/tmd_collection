@@ -352,7 +352,7 @@ sol2:
   
   --O4. https://ieeexplore.ieee.org/document/9486316
   #-- distance measurement with an essay in IEEE
-  
+
 
 
  ```
@@ -420,7 +420,9 @@ sol2:
  ```
  --O1. https://github.com/kulkarnikeerti/SegNet-Semantic-Segmentation
   ## git for SegNet
-
+ --O2. https://www.mrt.kit.edu/z/publ/download/2018/Meyer2018SemanticLanes.pdf
+  #-- essay for lane segmentation
+ --O3. 
  
  
  ```
