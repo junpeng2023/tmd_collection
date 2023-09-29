@@ -353,9 +353,16 @@ sol2:
   --O4. https://ieeexplore.ieee.org/document/9486316
   #-- distance measurement with an essay in IEEE
 
+  *--O5 https://medium.com/axinc-ai/yolov5-the-latest-model-for-object-detection-b13320ec516b
+  #-- with information about how to get the output of YOLO in txt format to get data such as width of bbox and locations of bots
 
+  *--O6 
 
  ```
+
+ ##### issue1. how to get the txt format with coordinate data of bots
+
+ *O1. use the detect.py and change the save_txt option while running that in terminal
 
  ### 6. How to realize the real-time detection
 

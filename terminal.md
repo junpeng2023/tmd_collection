@@ -416,6 +416,14 @@ O4 1.
  
 /--bug1: Do not choose the --view-img when trying to detect on the image files, as we will get endless windows shown at the same time leading to a disastrous stuck
 
+--O5
+```
+ python3 speed_detect.py --weights runs/train/exp7/weights/best.pt --data duckiebot/duckiebot_parameter.yaml --source duckiebot/datasets/images/train --save-txt
+#-- save txt files which contains the (x_center,y_center,width,height) data for each bot
+
+```
+
+
 
 
 3.
@@ -749,5 +757,54 @@ pip install <package>
 
 
 ```
+
+# 14.
+
+# 15. ngSPICE
+
+## 15.1 to import other files into the netlist
+
+```
+
+1.
+.include <file_name>
+e.g.1.
+.include fo4kette.net
+e.g.2.
+.include ds2_options.cir
+
+
+
+```
+
+## 15.2 to simulate and get waveforms
+
+```
+
+
+```
+
+
+
+## 15.3 to define components and their parameters
+
+```
+
+
+
+```
+
+## 15.4 to initialize ngspice and get to its patern in terminal with e.g. <
+
+
+```
+1.
+ngspice
+#-- to initialize ngspice
+
+
+```
+
+## 15.5 to 
 
 
