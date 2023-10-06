@@ -421,6 +421,13 @@ O4 1.
  python3 speed_detect.py --weights runs/train/exp7/weights/best.pt --data duckiebot/duckiebot_parameter.yaml --source duckiebot/datasets/images/train --save-txt
 #-- save txt files which contains the (x_center,y_center,width,height) data for each bot
 
+--O6
+
+```
+python3 speed_detect.py --weights runs/train/exp7/weights/best.pt --data duckiebot/duckiebot_parameter.yaml --source videos/my_video-10.mkv --view-img --hide-conf
+#-- use speed_detect.py to hide the probability configuration and show the speed on the bbox
+```
+
 ```
 
 
@@ -773,6 +780,9 @@ e.g.1.
 e.g.2.
 .include ds2_options.cir
 
+2.
+
+
 
 
 ```
@@ -780,6 +790,15 @@ e.g.2.
 ## 15.2 to simulate and get waveforms
 
 ```
+1.
+plot
+O1.
+plot all
+#-- plot the waveform with all variables inside
+O2.
+plot <variable_name>
+O3.
+plot
 
 
 ```
@@ -801,6 +820,13 @@ e.g.2.
 1.
 ngspice
 #-- to initialize ngspice
+
+2.
+source <file_name>
+
+
+3.
+run
 
 
 ```
