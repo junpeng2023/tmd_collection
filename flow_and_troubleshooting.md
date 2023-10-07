@@ -362,9 +362,11 @@ sol2:
 
 #### idea3. use the ones from intelligent traffic systems
 
+/--weblink:
 ```
-
-
+ --O1.
+ https://stackoverflow.com/questions/43732185/importerror-no-module-named-easydict
+ #-- to install the missing modules such as to initialize the module deep_sort 
 
 ```
 
