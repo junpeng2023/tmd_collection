@@ -360,6 +360,14 @@ sol2:
 
  ```
 
+#### idea3. use the ones from intelligent traffic systems
+
+```
+
+
+
+```
+
  ##### issue1. how to get the txt format with coordinate data of bots
 
  *O1. use the detect.py and change the save_txt option while running that in terminal
