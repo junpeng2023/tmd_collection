@@ -9,8 +9,19 @@
 1. for <> in os.listdir(<>)
 
 
-2. 
+2. with open('<file_name>', '<mode>') as f:
+O1.
+e.g.1.
+with open('car_line.txt', 'r') as f:
+O2.
+e.g.1.
+with open('car_line.txt', 'w') as f:
+O3.
+e.g.1.
 
+
+
+3.
 
 
 ``````
@@ -368,6 +379,17 @@ cv2.bitwise_or()
 
 ```
 
+### 3.10 ROI operations
+
+```
+1.
+e.g.1.
+roi = cv2.selectROI("Select ROI", frame, False, False)
+
+
+
+```
+
 
 ## 4. CUDA
 
@@ -394,9 +416,9 @@ cv2.bitwise_or()
  ```
 
 
- ## 5. numpy
+ ## 5. datatypes
 
- ### 5.1
+ ### 5.1 numpy
 
  ```
  1.
@@ -412,3 +434,31 @@ cv2.bitwise_or()
 
  
  ```
+
+ ### 5.2 list/dict
+
+ ```
+ 1. eval()
+  e.g.1.
+  line = eval(line) 
+
+ 2. <list_name>.strip('<element to be removed>')
+ e.g.1.
+  line = line.strip('\n')
+
+
+ 3. <list_name>.item()
+ /--weblinks: https://www.programiz.com/python-programming/methods/dictionary/items
+  e.g.1.
+   bbox_left = min([xyxy[0].item(), xyxy[2].item()])
+    bbox_top = min([xyxy[1].item(), xyxy[3].item()])
+    bbox_w = abs(xyxy[0].item() - xyxy[2].item())
+    bbox_h = abs(xyxy[1].item() - xyxy[3].item())
+
+ 
+ 
+ 
+ ```
+
+
+ ## 6. 

@@ -417,18 +417,22 @@ O4 1.
 /--bug1: Do not choose the --view-img when trying to detect on the image files, as we will get endless windows shown at the same time leading to a disastrous stuck
 
 --O5
-```
+
  python3 speed_detect.py --weights runs/train/exp7/weights/best.pt --data duckiebot/duckiebot_parameter.yaml --source duckiebot/datasets/images/train --save-txt
 #-- save txt files which contains the (x_center,y_center,width,height) data for each bot
 
 --O6
 
-```
+
 python3 speed_detect.py --weights runs/train/exp7/weights/best.pt --data duckiebot/duckiebot_parameter.yaml --source videos/my_video-10.mkv --view-img --hide-conf
 #-- use speed_detect.py to hide the probability configuration and show the speed on the bbox
-```
 
-```
+--O7 
+
+python3 test_5_frames.py --weights yolov5/runs/train/exp7/weights/best.pt --data yolov5/duckiebot/duckiebot_parameter.yaml --source yolov5/videos/my_video-10.mkv --view-img --hide-conf --save-txt
+
+
+
 
 
 
