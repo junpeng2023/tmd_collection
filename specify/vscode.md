@@ -26,6 +26,20 @@ e.g.1.
 
 ``````
 
+### 1.1 os.path
+
+```
+
+1.
+<a two dimentional list which contains head and tail> =os.path.split(<path_to_file>)
+e.g.1.
+head_tail = os.path.split(path)
+
+2.
+
+
+```
+
 
 ## 2. Basics
 
