@@ -374,6 +374,27 @@ sol2:
 
  *O1. use the detect.py and change the save_txt option while running that in terminal
 
+
+#### idea4. use the Apriltag for speed estimation
+
+/--weblink:
+```
+--O1.
+
+
+
+```
+
+#### use optical flow 
+/--weblink:
+```
+O1. 
+https://github.com/swhan0329/vehicle_speed_estimation
+#-- to get the speed of vehicles on high way for speed estimation in a certain moment
+
+
+```
+
  ### 6. How to realize the real-time detection
 
 #### idea1 using YOLOv5
