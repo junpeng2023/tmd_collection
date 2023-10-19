@@ -564,3 +564,19 @@ rosbag.bag.ROSBagException: Bag contains no message
 /--sol1: check the data integrity in the bag file (rosbag info <>)
 
 
+# Troubleshooting
+
+## E1. no playable streams after composing a video
+
+
+```
+/weblink:
+https://stackoverflow.com/questions/29320976/opencv-videowrite-doesnt-write-video
+
+/sol1: instead of defining the width&height of the output video myself, just use the ones from the captured video to make sure that they are all compatible for display.
+
+
+
+```
+
+
