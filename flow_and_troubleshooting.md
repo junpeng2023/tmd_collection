@@ -579,4 +579,16 @@ https://stackoverflow.com/questions/29320976/opencv-videowrite-doesnt-write-vide
 
 ```
 
+## E2. convert cvtColor error
+
+```
+/weblink:
+
+/sol1:
+wrong or missing directory check directory integrity
+
+
+
+```
+
 
