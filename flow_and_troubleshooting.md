@@ -317,6 +317,18 @@ sol2:
  `````` 
  --O1 gbt CV project plus Q61 
  --O2
+  
+ 1.
+ https://blog.csdn.net/weixin_45303602/article/details/133814463?ops_request_misc=&request_id=&biz_id=102&utm_term=%E5%85%89%E6%B5%81%E6%B5%8B%E9%80%9F&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-3-133814463.142^v96^control&spm=1018.2226.3001.4187
+ ## with functions in opencv to implement optical flow
+
+ *2.
+ https://blog.csdn.net/uncle_ll/article/details/121835741?ops_request_misc=&request_id=&biz_id=102&utm_term=%E5%85%89%E6%B5%81&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-4-121835741.142^v96^control&spm=1018.2226.3001.4187
+ #-- code in opencv about the sparse and dense optical flow implementation
+ 
+  
+
+
  `````` 
  /--bug1: pyrealsense2 package missing by vscode
  /--susp1: conda install -c conda-forge librealsense

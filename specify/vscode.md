@@ -281,6 +281,33 @@ blurred = cv2.GaussianBlur(gray, (5, 5), 0)
 
 ```
 
+
+### 3.9 optical flow
+
+```
+cv2.calcOpticalFlowPyrLK()
+#-- 该函数用于计算稀疏光流。它接受前一帧图像和当前帧图像作为输入，并根据给定的特征点或兴趣区域跟踪这些特征点在两个图像之间的位置变化。函数返回被成功追踪的特征点的新位置以及一个状态值。
+
+cv2.calcOpticalFlowFarneback()：
+#--该函数用于计算稠密光流。它接受前一帧图像和当前帧图像作为输入，并估计整个图像中每个像素点的运动向量。函数返回每个像素点的光流向量值。
+
+cv2.goodFeaturesToTrack()：
+#--该函数用于在图像中检测良好的特征点。它接受输入图像和一些参数，如角点检测方法、特征点数量等，并返回检测到的良好特征点的坐标。
+
+cv2.drawOpticalFlow()：
+#--该函数用于可视化光流结果。它接受一张彩色图像和光流向量作为输入，并在图像上绘制箭头表示运动方向和强度。
+————————————————
+版权声明：本文为CSDN博主「陈子迩」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_45303602/article/details/133814463
+
+5.
+cv2.goodFeatureToTrack()
+#-- to determine which points should be tracked
+
+
+
+```
+
 ### 3-A Troubleshooting
 
 
@@ -473,6 +500,22 @@ roi = cv2.selectROI("Select ROI", frame, False, False)
  
  
  ```
+
+
+ ### 5.3 arrays
+
+ ```
+ 1.
+ <>.ravel()
+#-- to flatten a multi-dimensional array into a 1-dimensional array
+ e.g.1.
+ a,b=new.ravel()
+ c,d= old.ravel()
+ 
+
+
+
+```
 
 
  ## 6. 
