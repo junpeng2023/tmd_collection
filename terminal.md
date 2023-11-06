@@ -627,32 +627,6 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
 
 ``````
 
-## 8.2 duckietown lane following(autopilot) demo
-
-```
-Step: 
-S1. check the usb port of the VirtualBox e.g. 
-
-S2. check ifconfig in terminal so that we can confirm that we have the IP address of e.g.  inet 192.168.238.144 with 192.168.238 as the first three numbers, which indicates that is a port of duckietown
-
-
-
-
-1.
-dts duckiebot demo --duckiebot_name schorsch --demo_name lane_following --package_name duckietown_demos --image gitlab.lrz.de:5005/tum-lis/staff/projects/duckietown/base:latest
-## dts command used to start the lane following demo
-
-
-
-2.
-dts duckiebot keyboard_control schorsch
-#-- start a GUI in which we can control the bots with up down left right using keyboard.
-
-
-
-
-```
-
 
 
 # 9 CV

@@ -1,5 +1,17 @@
 ## this is the collection of information for praktikum mmk
 
+# 0. Useful websites
+
+```
+*1.
+csdn
+
+2.
+
+
+
+```
+
 
 # 1. Mustererkennung
 
