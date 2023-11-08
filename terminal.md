@@ -837,4 +837,16 @@ run
 
 ## 15.5 to 
 
+# NVIDIA 
+
+## GPU configuration
+
+```
+1.
+nvidia-smi
+#-- to see the GPU configuration
+
+
+
+```
 
