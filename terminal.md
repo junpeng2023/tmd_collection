@@ -431,7 +431,13 @@ python3 speed_detect.py --weights runs/train/exp7/weights/best.pt --data duckieb
 
 python3 test_5_frames.py --weights yolov5/runs/train/exp7/weights/best.pt --data yolov5/duckiebot/duckiebot_parameter.yaml --source yolov5/videos/my_video-10.mkv --view-img --hide-conf --save-txt
 
+--O8
 
+python3 test_region.py --weights yolov5/runs/train/exp7/weights/best.pt --data yolov5/duckiebot/duckiebot_parameter.yaml --source yolov5/videos/new_det-1.mp4 --view-img --hide-conf --save-txt
+
+--O9
+
+python3 test_double_bots.py --weights yolov5/runs/train/exp7/weights/best.pt --data yolov5/duckiebot/duckiebot_parameter.yaml --source yolov5/videos/my_video-10.mkv --view-img --hide-conf --save-txt
 
 
 
