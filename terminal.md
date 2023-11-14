@@ -685,6 +685,12 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
  e.g.1.
  ffmpeg -i example.mkv -c copy example.mp4
 
+ 7.
+ ffmpeg -i new_det-19.mp4 -q:v 1 -r 30 /media/ziwei/PortableSSD/littleducks_images/new_19_frame%4d.png
+ #-- use -q:v 1 for verlustlos transformation
+
+ 
+
  
 
  ``````
