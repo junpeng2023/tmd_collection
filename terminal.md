@@ -658,6 +658,10 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
  #-- to extract frames from a mp4 video
  O1 
  ffmpeg -i col_bag_1_depth-2023-07-13_22.08.57.mp4 -r 30 /media/ziwei/PortableSSD/depth_video/images/col/col_bad/col_bad_1/frame%4d.
+  2-1.
+  ffmpeg -i new_det-15.mp4 -q:v 1 -r 30 /home/ziwei/Downloads/frames_duckietown_training/new_det_15/frame%4d.png
+  #-- use -q:v 1 to maintain the resolution and quality of the frames, otherwise would be losses
+
 
 
  3.
