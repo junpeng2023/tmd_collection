@@ -443,6 +443,7 @@ python3 test_double_bots.py --weights yolov5/runs/train/exp7/weights/best.pt --d
 
 
 
+
 3.
 python val.py --weights yolov5s.pt --data coco.yaml --img 640 --half
 #-- to validate a model's accuracy on the COCO dataset's val or test splits.
@@ -658,10 +659,6 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
  #-- to extract frames from a mp4 video
  O1 
  ffmpeg -i col_bag_1_depth-2023-07-13_22.08.57.mp4 -r 30 /media/ziwei/PortableSSD/depth_video/images/col/col_bad/col_bad_1/frame%4d.
-  2-1.
-  ffmpeg -i new_det-15.mp4 -q:v 1 -r 30 /home/ziwei/Downloads/frames_duckietown_training/new_det_15/frame%4d.png
-  #-- use -q:v 1 to maintain the resolution and quality of the frames, otherwise would be losses
-
 
 
  3.
@@ -684,12 +681,6 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
  #-- to convert a video into another format
  e.g.1.
  ffmpeg -i example.mkv -c copy example.mp4
-
- 7.
- ffmpeg -i new_det-19.mp4 -q:v 1 -r 30 /media/ziwei/PortableSSD/littleducks_images/new_19_frame%4d.png
- #-- use -q:v 1 for verlustlos transformation
-
- 
 
  
 
@@ -862,7 +853,8 @@ run
 nvidia-smi
 #-- to see the GPU configuration
 
-
+2.
+nvcc --version
 
 ```
 
