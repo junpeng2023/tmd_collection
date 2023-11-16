@@ -174,6 +174,9 @@ TypeError: 'NoneType' object is not iterable
          --O4 https://www.hindawi.com/journals/misy/2022/1828848/
          #-- a demo with yolo_txt figure for data visualisation
 
+         */--O5 https://blog.ovhcloud.com/object-detection-train-yolov5-on-a-custom-dataset/
+         #-- the english version of the yolov5 tutorial (for tumwiki)
+
 
 
 
