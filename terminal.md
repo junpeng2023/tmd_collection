@@ -640,6 +640,9 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
 
 ## 9.1 ffmpeg
 
+C1. the object of convertion must be located in the same dir
+C2.
+
 ``````
   1.
   ffmpeg -r <frame_rate> -i <png_sequenz> -c:v libx264 -pix_fmt yuv420p <path_to_mp4>
@@ -681,6 +684,12 @@ roslaunch duckietown_visualization publish_map.launch map_name:="small_loop" rvi
  #-- to convert a video into another format
  e.g.1.
  ffmpeg -i example.mkv -c copy example.mp4
+
+ 7.
+ ffmpeg -i <video_dir> -q:v 1 -r <frame_rate> <dir_to_frames>
+ e.g.1
+ ffmpeg -i new_det-19.mp4 -q:v 1 -r 30 /media/ziwei/PortableSSD/littleducks_images/new_19_frame%4d.png
+ #-- for convertion from video to frames without resolution loss
 
  
 
