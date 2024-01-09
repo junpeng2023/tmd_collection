@@ -436,9 +436,12 @@ python3 test_5_frames.py --weights yolov5/runs/train/exp7/weights/best.pt --data
 python3 test_region.py --weights yolov5/runs/train/exp7/weights/best.pt --data yolov5/duckiebot/duckiebot_parameter.yaml --source yolov5/videos/new_det-1.mp4 --view-img --hide-conf --save-txt
 
 --O9
-
 python3 test_double_bots.py --weights yolov5/runs/train/exp7/weights/best.pt --data yolov5/duckiebot/duckiebot_parameter.yaml --source yolov5/videos/my_video-10.mkv --view-img --hide-conf --save-txt
 
+
+--O10
+python3 detect.py --weights runs/train/exp_bot_640/weights/best.pt --data duckiebot/duckiebot_parameter.yaml --source videos/new_det-17_frames --hide-conf --save-txt
+#-- to detect the duckiebot in frames e.g. new_det-17.mp4
 
 
 
