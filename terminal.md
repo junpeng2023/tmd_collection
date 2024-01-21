@@ -375,7 +375,7 @@ rostopic info <topic_name>
 
 # 6. Python
 
-## YOLO
+## YOLOv5
 
 ```
 
@@ -697,6 +697,23 @@ C2.
  
 
  ``````
+
+ ## 9.2 yolov8
+
+ ```
+ 1. 
+ yolo predict model=<pt_file> source=<data_to_predict> imgsz=<img_size> save_txt=<True_or_False>
+ e.g.
+ yolo predict model=/media/ziwei/PortableSSD/Junpeng/from_git/test_traffic/yolov5/yolov8_runs/obb/train_smalltest/weights/best.pt source=/media/ziwei/PortableSSD/Junpeng/from_git/test_traffic/yolov5/videos/new_det-17.mp4 imgsz=640 save_txt=True
+ #-- example of obb prediction using new_det-17.mp4 
+ 
+ 2.
+ e.g.
+ yolo task=obb mode=train model=yolov8l-obb.pt data=/media/ziwei/PortableSSD/Junpeng/from_git/test_traffic/yolov5/yolov8_datasets/duckiebotsmalltest/datasmall-obb.yaml epochs=100 imgsz=640 batch=8 save_txt=True
+ 
+ 
+ 
+ ```
 
  
  ```
