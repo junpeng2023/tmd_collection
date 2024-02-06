@@ -708,9 +708,14 @@ C2.
  #-- example of obb prediction using new_det-17.mp4 
  
  2.
- e.g.
+ e.g.1.
  yolo task=obb mode=train model=yolov8l-obb.pt data=/media/ziwei/PortableSSD/Junpeng/from_git/test_traffic/yolov5/yolov8_datasets/duckiebotsmalltest/datasmall-obb.yaml epochs=100 imgsz=640 batch=8 save_txt=True
  #-- examples of obb training 
+
+ e.g.2.
+ yolo task=obb mode=train model=yolov8m-obb.pt data=/media/ziwei/PortableSSD/Junpeng/from_git/test_traffic/yolov5/yolov8_datasets/splitcvatbot/data-obb.yaml epochs=80 imgsz=1024 batch=10 save_txt=True
+ #-- with imgsz=1024 and splitcvatbot datasets for obb training
+
  
  
  
