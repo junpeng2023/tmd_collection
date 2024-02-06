@@ -710,6 +710,7 @@ C2.
  2.
  e.g.
  yolo task=obb mode=train model=yolov8l-obb.pt data=/media/ziwei/PortableSSD/Junpeng/from_git/test_traffic/yolov5/yolov8_datasets/duckiebotsmalltest/datasmall-obb.yaml epochs=100 imgsz=640 batch=8 save_txt=True
+ #-- examples of obb training 
  
  
  
